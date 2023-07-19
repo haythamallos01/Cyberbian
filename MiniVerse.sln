@@ -1,0 +1,117 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuessBot", "GuessBot\GuessBot.csproj", "{ADD9A5B7-0EDF-408E-AB24-5133390716DE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SearchAPI", "SearchAPI\SearchAPI.csproj", "{A199342B-FE88-4DF6-A67B-240EAA949F21}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utilities", "Utilities\Utilities.csproj", "{BC6C3F13-C398-4E5B-9DDA-AE0CA83FF750}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Desktop", "Desktop", "{A54FD611-FBF3-47F0-8182-56B8EEFAA272}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AIBot.Server", "AIBot\Server\AIBot.Server.csproj", "{BAF92E47-CD3F-4227-AD53-839BAC724211}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AIBot.Client", "AIBot\Client\AIBot.Client.csproj", "{7720306E-8DF0-4248-BCA4-DDCB358D95A9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AIBot.Shared", "AIBot\Shared\AIBot.Shared.csproj", "{FA2D4715-5AA0-42D4-ACCE-21E16E6174B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AIBot", "AIBot", "{1999612C-CA5D-469F-8852-FE3AA9E80521}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{1FBD525A-7A60-4F74-B382-6BD50EC76391}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "tekhub-main-nlp", "tekhub-main-nlp\", "{E171512C-FAB5-49D2-BC74-2DEA61DB9C86}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_58135"
+		Debug.AspNetCompiler.PhysicalPath = "tekhub-main-nlp\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_58135\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_58135"
+		Release.AspNetCompiler.PhysicalPath = "tekhub-main-nlp\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_58135\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "58135"
+		SlnRelativePath = "tekhub-main-nlp\"
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CyberbianSite.Server", "CyberbianSite\Server\CyberbianSite.Server.csproj", "{29D89AA0-2370-4AF5-BE36-799BAD7E8D42}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CyberbianSite.Client", "CyberbianSite\Client\CyberbianSite.Client.csproj", "{36A4384E-A151-4CFF-9BE4-E710F2A455D1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CyberbianSite.Shared", "CyberbianSite\Shared\CyberbianSite.Shared.csproj", "{5071239B-F80C-462B-8228-38AEBAFEBE1B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CyberbianSite", "CyberbianSite", "{90189B6D-E92F-44AC-91BC-046844819A07}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ADD9A5B7-0EDF-408E-AB24-5133390716DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADD9A5B7-0EDF-408E-AB24-5133390716DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADD9A5B7-0EDF-408E-AB24-5133390716DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADD9A5B7-0EDF-408E-AB24-5133390716DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A199342B-FE88-4DF6-A67B-240EAA949F21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A199342B-FE88-4DF6-A67B-240EAA949F21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A199342B-FE88-4DF6-A67B-240EAA949F21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A199342B-FE88-4DF6-A67B-240EAA949F21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC6C3F13-C398-4E5B-9DDA-AE0CA83FF750}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC6C3F13-C398-4E5B-9DDA-AE0CA83FF750}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC6C3F13-C398-4E5B-9DDA-AE0CA83FF750}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC6C3F13-C398-4E5B-9DDA-AE0CA83FF750}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAF92E47-CD3F-4227-AD53-839BAC724211}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAF92E47-CD3F-4227-AD53-839BAC724211}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAF92E47-CD3F-4227-AD53-839BAC724211}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAF92E47-CD3F-4227-AD53-839BAC724211}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7720306E-8DF0-4248-BCA4-DDCB358D95A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7720306E-8DF0-4248-BCA4-DDCB358D95A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7720306E-8DF0-4248-BCA4-DDCB358D95A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7720306E-8DF0-4248-BCA4-DDCB358D95A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA2D4715-5AA0-42D4-ACCE-21E16E6174B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA2D4715-5AA0-42D4-ACCE-21E16E6174B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA2D4715-5AA0-42D4-ACCE-21E16E6174B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA2D4715-5AA0-42D4-ACCE-21E16E6174B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E171512C-FAB5-49D2-BC74-2DEA61DB9C86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E171512C-FAB5-49D2-BC74-2DEA61DB9C86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E171512C-FAB5-49D2-BC74-2DEA61DB9C86}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{E171512C-FAB5-49D2-BC74-2DEA61DB9C86}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{29D89AA0-2370-4AF5-BE36-799BAD7E8D42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29D89AA0-2370-4AF5-BE36-799BAD7E8D42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29D89AA0-2370-4AF5-BE36-799BAD7E8D42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29D89AA0-2370-4AF5-BE36-799BAD7E8D42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36A4384E-A151-4CFF-9BE4-E710F2A455D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36A4384E-A151-4CFF-9BE4-E710F2A455D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36A4384E-A151-4CFF-9BE4-E710F2A455D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36A4384E-A151-4CFF-9BE4-E710F2A455D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5071239B-F80C-462B-8228-38AEBAFEBE1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5071239B-F80C-462B-8228-38AEBAFEBE1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5071239B-F80C-462B-8228-38AEBAFEBE1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5071239B-F80C-462B-8228-38AEBAFEBE1B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A199342B-FE88-4DF6-A67B-240EAA949F21} = {A54FD611-FBF3-47F0-8182-56B8EEFAA272}
+		{BC6C3F13-C398-4E5B-9DDA-AE0CA83FF750} = {A54FD611-FBF3-47F0-8182-56B8EEFAA272}
+		{BAF92E47-CD3F-4227-AD53-839BAC724211} = {1999612C-CA5D-469F-8852-FE3AA9E80521}
+		{7720306E-8DF0-4248-BCA4-DDCB358D95A9} = {1999612C-CA5D-469F-8852-FE3AA9E80521}
+		{FA2D4715-5AA0-42D4-ACCE-21E16E6174B6} = {1999612C-CA5D-469F-8852-FE3AA9E80521}
+		{E171512C-FAB5-49D2-BC74-2DEA61DB9C86} = {1FBD525A-7A60-4F74-B382-6BD50EC76391}
+		{29D89AA0-2370-4AF5-BE36-799BAD7E8D42} = {90189B6D-E92F-44AC-91BC-046844819A07}
+		{36A4384E-A151-4CFF-9BE4-E710F2A455D1} = {90189B6D-E92F-44AC-91BC-046844819A07}
+		{5071239B-F80C-462B-8228-38AEBAFEBE1B} = {90189B6D-E92F-44AC-91BC-046844819A07}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {152BF270-137A-4384-9C51-A10D7F2AC823}
+	EndGlobalSection
+EndGlobal

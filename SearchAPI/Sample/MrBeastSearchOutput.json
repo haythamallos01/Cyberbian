@@ -1,0 +1,1237 @@
+{
+  "_type": "SearchResponse",
+  "queryContext": { "originalQuery": "Mr. Beast" },
+  "webPages": {
+    "webSearchUrl": "https:\/\/www.bing.com\/search?q=Mr.+Beast",
+    "totalEstimatedMatches": 55100000,
+    "value": [
+      {
+        "id": "https:\/\/api.bing.microsoft.com\/api\/v7\/#WebPages.0",
+        "name": "MrBeast - YouTube",
+        "url": "https:\/\/www.youtube.com\/user\/MrBeast6000",
+        "isFamilyFriendly": true,
+        "displayUrl": "https:\/\/www.youtube.com\/user\/MrBeast6000",
+        "snippet": "$1 vs $1,000,000,000 Yacht! MrBeast 127M views2 weeks ago CC Ages 1 - 100 Fight For $500,000 MrBeast 145M views4 weeks ago CC 1,000 Deaf People Hear For The First Time MrBeast 89M views1...",
+        "deepLinks": [
+          {
+            "name": "Beast Reacts",
+            "url": "https:\/\/www.youtube.com\/channel\/UCUaT_39o1x6qWjz7K2pWcgw",
+            "snippet": "SUBSCRIBE FOR A COOKIEMrBeast and Chris react to the internet's favorite videos."
+          },
+          {
+            "name": "Videos",
+            "url": "https:\/\/www.youtube.com\/@MrBeast\/videos",
+            "snippet": "SUBSCRIBE FOR A COOKIE!Accomplishments- Raised $20,000,000 To Plant 20,000,000 Trees- Given millions to charity- Donated over 100 cars lol- Gave away a priva..."
+          },
+          {
+            "name": "Mrbeast Gaming",
+            "url": "https:\/\/www.youtube.com\/channel\/UCIPPMRA040LQr5QPyJEbmXA",
+            "snippet": "MrBeast Gaming - SUBSCRIBE OR ELSE",
+            "deepLinks": []
+          }
+        ],
+        "dateLastCrawled": "2023-06-25T06:08:00.0000000Z",
+        "language": "en",
+        "isNavigational": true
+      },
+      {
+        "id": "https:\/\/api.bing.microsoft.com\/api\/v7\/#WebPages.1",
+        "name": "I Survived 24 Hours Straight In Ice - YouTube",
+        "url": "https:\/\/www.youtube.com\/watch?v=SZQhgExjBvQ",
+        "isFamilyFriendly": true,
+        "displayUrl": "https:\/\/www.youtube.com\/watch?v=SZQhgExjBvQ",
+        "snippet": "0:00 11:34 I Survived 24 Hours Straight In Ice MrBeast 136M subscribers 123M views 2 years ago i borderline went crazy about 17 hours in... New Merch - https:\/\/shopmrbeast.com\/ Show more Shop the...",
+        "dateLastCrawled": "2023-06-25T11:12:00.0000000Z",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https:\/\/api.bing.microsoft.com\/api\/v7\/#WebPages.2",
+        "contractualRules": [
+          {
+            "_type": "ContractualRules\/LicenseAttribution",
+            "targetPropertyName": "snippet",
+            "targetPropertyIndex": 2,
+            "mustBeCloseToContent": true,
+            "license": {
+              "name": "CC-BY-SA",
+              "url": "http:\/\/creativecommons.org\/licenses\/by-sa\/3.0\/"
+            },
+            "licenseNotice": "Text under CC-BY-SA license"
+          }
+        ],
+        "name": "MrBeast - Wikipedia",
+        "url": "https:\/\/en.wikipedia.org\/wiki\/MrBeast",
+        "thumbnailUrl": "https:\/\/www.bing.com\/th?id=OIP.3qjUrTJZ2gwZs5_-cDD0ZQAAAA&w=80&h=80&c=1&pid=5.1",
+        "isFamilyFriendly": true,
+        "displayUrl": "https:\/\/en.wikipedia.org\/wiki\/MrBeast",
+        "snippet": "James Stephen Donaldson [a] (born May 7, 1998), better known as MrBeast, is an American YouTuber and philanthropist. He is credited with pioneering a genre of YouTube videos that centers on expensive stunts and challenges. [11]",
+        "dateLastCrawled": "2023-06-26T13:07:00.0000000Z",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https:\/\/api.bing.microsoft.com\/api\/v7\/#WebPages.3",
+        "name": "I Ate The World’s Largest Slice Of Pizza - YouTube",
+        "url": "https:\/\/www.youtube.com\/watch?v=Rj_vssRaZlQ",
+        "isFamilyFriendly": true,
+        "displayUrl": "https:\/\/www.youtube.com\/watch?v=Rj_vssRaZlQ",
+        "snippet": "This slice of pizza was expensive...New Merch - https:\/\/shopmrbeast.com\/SUBSCRIBE OR I TAKE YOUR DOG-----...",
+        "dateLastCrawled": "2023-06-26T08:16:00.0000000Z",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https:\/\/api.bing.microsoft.com\/api\/v7\/#WebPages.4",
+        "name": "MrBeast - YouTube",
+        "url": "https:\/\/www.youtube.com\/mrbeast",
+        "thumbnailUrl": "https:\/\/www.bing.com\/th?id=OIP.IpUVkFPWZH3Ev_FgH1wIGgHaHa&w=80&h=80&c=1&pid=5.1",
+        "isFamilyFriendly": true,
+        "displayUrl": "https:\/\/www.youtube.com\/mrbeast",
+        "snippet": "Share your videos with friends, family, and the world",
+        "dateLastCrawled": "2023-06-26T06:08:00.0000000Z",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https:\/\/api.bing.microsoft.com\/api\/v7\/#WebPages.5",
+        "name": "Mr Beast (@MrBeast) | Twitter",
+        "url": "https:\/\/twitter.com\/MrBeast",
+        "thumbnailUrl": "https:\/\/www.bing.com\/th?id=ODL.d1c545a3246d110c69ec8ac9671a9b19&w=80&h=80&c=1&pid=5.1",
+        "isFamilyFriendly": true,
+        "displayUrl": "https:\/\/twitter.com\/MrBeast",
+        "snippet": "MrBeast @MrBeast · Jul 28, 2022 Over a million people celebrated 100,000,000 subscribers with me 🥹 YouTube is the one thing that’s always made me happy and I’m grateful I get to do this all day everyday :) 31.1K 29.5K 572K MrBeast @MrBeast · Jun 20 Replying to @MrBeast",
+        "dateLastCrawled": "2023-06-25T12:03:00.0000000Z",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https:\/\/api.bing.microsoft.com\/api\/v7\/#WebPages.6",
+        "name": "24 Hours In The Most Haunted Place On Earth - YouTube",
+        "url": "https:\/\/www.youtube.com\/watch?v=YyhKdOCwD7s",
+        "isFamilyFriendly": true,
+        "displayUrl": "https:\/\/www.youtube.com\/watch?v=YyhKdOCwD7s",
+        "snippet": "2.3M 90M views 3 years ago YOU WON'T BELIEVE WHAT WE FOUND! lol New Merch - https:\/\/shopmrbeast.com\/ Moments Before Disaster! Would You Swim With Sharks For $100,000? MrBeast I Got Hunted By The...",
+        "dateLastCrawled": "2023-06-26T02:15:00.0000000Z",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https:\/\/api.bing.microsoft.com\/api\/v7\/#WebPages.7",
+        "name": "MrBeast (TV Series 2012– ) - IMDb",
+        "url": "https:\/\/www.imdb.com\/title\/tt10589896\/",
+        "thumbnailUrl": "https:\/\/www.bing.com\/th?id=OIP.1mXh6oviCwH3DCTCDCBRjgAAAA&w=80&h=80&c=1&pid=5.1",
+        "isFamilyFriendly": true,
+        "displayUrl": "https:\/\/www.imdb.com\/title\/tt10589896",
+        "snippet": "MrBeast: With Jimmy Donaldson, Chris Tyson, Chandler Hallow, Karl Jacobs. Philanthropist and entrepreneur Jimmy Donaldson, better known as MrBeast, and his group of friends do stunts and challenges that no one else dares to try.",
+        "dateLastCrawled": "2023-06-26T19:05:00.0000000Z",
+        "language": "en",
+        "isNavigational": false
+      },
+      {
+        "id": "https:\/\/api.bing.microsoft.com\/api\/v7\/#WebPages.8",
+        "name": "MrBeast's YouTube Stats (Summary Profile) - Social Blade Stats",
+        "url": "https:\/\/socialblade.com\/youtube\/user\/mrbeast6000",
+        "isFamilyFriendly": true,
+        "displayUrl": "https:\/\/socialblade.com\/youtube\/user\/mrbeast6000",
+        "snippet": "View the daily YouTube analytics of MrBeast and track progress charts, view future predictions, related channels, and track realtime live sub counts.",
+        "dateLastCrawled": "2023-06-25T06:48:00.0000000Z",
+        "language": "en",
+        "isNavigational": false
+      }
+    ]
+  },
+  "entities": {
+    "value": [
+      {
+        "id": "https:\/\/api.bing.microsoft.com\/api\/v7\/#Entities.0",
+        "contractualRules": [
+          {
+            "_type": "ContractualRules\/LicenseAttribution",
+            "targetPropertyName": "description",
+            "mustBeCloseToContent": true,
+            "license": {
+              "name": "CC-BY-SA",
+              "url": "http:\/\/creativecommons.org\/licenses\/by-sa\/3.0\/"
+            },
+            "licenseNotice": "Text under CC-BY-SA license"
+          },
+          {
+            "_type": "ContractualRules\/LinkAttribution",
+            "targetPropertyName": "description",
+            "mustBeCloseToContent": true,
+            "text": "Wikipedia",
+            "url": "http:\/\/en.wikipedia.org\/wiki\/MrBeast"
+          },
+          {
+            "_type": "ContractualRules\/MediaAttribution",
+            "targetPropertyName": "image",
+            "mustBeCloseToContent": true,
+            "url": "http:\/\/en.wikipedia.org\/wiki\/MrBeast"
+          }
+        ],
+        "webSearchUrl": "https:\/\/www.bing.com\/entityexplore?q=MrBeast&filters=sid:%220148fc66-9109-d532-1a7d-7b43fc4a7250%22&elv=AXXfrEiqqD9r3GuelwApulrJXraMo1hjmNYchXcJBRdo7nfC*Fa34HNcMR*vS!vilYYfSG5tNtdpNC2xXfpkLL2tWUXH8gOETgTqiXRdmo!r",
+        "name": "MrBeast",
+        "url": "https:\/\/shopmrbeast.com\/",
+        "image": {
+          "name": "MrBeast",
+          "thumbnailUrl": "https:\/\/www.bing.com\/th?id=AMMS_a12673fc5b83742a672f8be641f37bef&w=110&h=110&c=12&rs=1&qlt=80&cdv=1&pid=16.2",
+          "provider": [
+            {
+              "_type": "Organization",
+              "url": "http:\/\/en.wikipedia.org\/wiki\/MrBeast"
+            }
+          ],
+          "hostPageUrl": "http:\/\/upload.wikimedia.org\/wikipedia\/commons\/4\/4a\/MrBeast_frontface_2021.png",
+          "width": 110,
+          "height": 110,
+          "sourceWidth": 405,
+          "sourceHeight": 534
+        },
+        "description": "Jimmy Donaldson, better known as MrBeast, is an American YouTuber. He is credited with pioneering a genre of YouTube videos that centers on expensive stunts. His YouTube channel reached 130 million subscribers in January 2023, making it the fourth-most-subscribed on the platform.",
+        "entityPresentationInfo": { "entityScenario": "DominantEntity" },
+        "bingId": "0148fc66-9109-d532-1a7d-7b43fc4a7250"
+      }
+    ]
+  },
+  "images": {
+    "id": "https:\/\/api.bing.microsoft.com\/api\/v7\/#Images",
+    "readLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=mr.+beast&qpvt=mr.+beast",
+    "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=mr.+beast&qpvt=mr.+beast",
+    "isFamilyFriendly": true,
+    "value": [
+      {
+        "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=mr.+beast&id=3F5CDBA003ABECE61786596A3A8B6FA35A660468&FORM=IQFRBA",
+        "name": "Mr Beast Biography, Age, Wiki, Height, Weight, Girlfriend, Family & More",
+        "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?id=OIP.eje1B_y6jUBbxz6ydZwVlwHaFY&pid=Api",
+        "datePublished": "2021-05-05T07:20:00.0000000Z",
+        "contentUrl": "https:\/\/www.wikibio.us\/wp-content\/uploads\/2021\/05\/Mr-Beast-578x420.jpg",
+        "hostPageUrl": "https:\/\/www.wikibio.us\/mr-beast\/",
+        "contentSize": "34410 B",
+        "encodingFormat": "jpeg",
+        "hostPageDisplayUrl": "https:\/\/www.wikibio.us\/mr-beast\/",
+        "width": 578,
+        "height": 420,
+        "thumbnail": {
+          "width": 474,
+          "height": 344
+        },
+        "insightsMetadata": {
+          "shoppingSourcesCount": 0,
+          "recipeSourcesCount": 0
+        }
+      },
+      {
+        "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=mr.+beast&id=DD10487909BB45E177F505A24094B58C0A1B61F3&FORM=IQFRBA",
+        "name": "mr beast - Not A Gamer : Esports, Gaming & Influencer News",
+        "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?id=OIP.Qpie_iRxAXqiMQs9Zxc84gHaFS&pid=Api",
+        "datePublished": "2021-03-15T10:40:00.0000000Z",
+        "contentUrl": "https:\/\/notagamer.net\/wp-content\/uploads\/2020\/10\/mrbeast-league-of-legends-1140x815.jpg",
+        "hostPageUrl": "https:\/\/notagamer.net\/tag\/mr-beast\/",
+        "contentSize": "66381 B",
+        "encodingFormat": "jpeg",
+        "hostPageDisplayUrl": "https:\/\/notagamer.net\/tag\/mr-beast\/",
+        "width": 1140,
+        "height": 815,
+        "thumbnail": {
+          "width": 474,
+          "height": 338
+        },
+        "insightsMetadata": {
+          "shoppingSourcesCount": 0,
+          "recipeSourcesCount": 0
+        }
+      },
+      {
+        "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=mr.+beast&id=6BC724704AA5E2EC65F567EECB42639BC08A7C48&FORM=IQFRBA",
+        "name": "MrBeast accused of bullying by former employee » TalkEsport",
+        "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?id=OIP.cExOUjmAPgtCXTkYmlBSCgHaEj&pid=Api",
+        "datePublished": "2021-09-11T18:36:00.0000000Z",
+        "contentUrl": "https:\/\/www.talkesport.com\/wp-content\/uploads\/mr-beast-3.jpg",
+        "hostPageUrl": "https:\/\/www.talkesport.com\/entertainment\/mrbeast-accused-of-bullying-by-former-employee\/",
+        "contentSize": "94788 B",
+        "encodingFormat": "jpeg",
+        "hostPageDisplayUrl": "https:\/\/www.talkesport.com\/entertainment\/mrbeast-accused-of-bullying-by-former-employee\/",
+        "width": 1140,
+        "height": 700,
+        "thumbnail": {
+          "width": 474,
+          "height": 291
+        },
+        "insightsMetadata": {
+          "shoppingSourcesCount": 0,
+          "recipeSourcesCount": 0
+        }
+      },
+      {
+        "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=mr.+beast&id=6CAE5B018CBF563A651A63B2B3A9F485C3A9C917&FORM=IQFRBA",
+        "name": "Mr Beast net worth: Where does the YouTuber get his money? - Legit.ng",
+        "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?id=OIP.sIByVVw-IrLb1P2j_xGkTgHaHa&pid=Api",
+        "datePublished": "2020-10-20T12:37:00.0000000Z",
+        "contentUrl": "https:\/\/netstorage-legit.akamaized.net\/images\/0011202ba6c52a3c.jpg?imwidth=900",
+        "hostPageUrl": "https:\/\/www.legit.ng\/1370381-mr-beast-net-worth-where-youtuber-money.html",
+        "contentSize": "41644 B",
+        "encodingFormat": "jpeg",
+        "hostPageDisplayUrl": "https:\/\/www.legit.ng\/1370381-mr-beast-net-worth-where-youtuber-money.html",
+        "width": 1000,
+        "height": 1000,
+        "thumbnail": {
+          "width": 474,
+          "height": 474
+        },
+        "insightsMetadata": {
+          "shoppingSourcesCount": 0,
+          "recipeSourcesCount": 0
+        }
+      },
+      {
+        "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=mr.+beast&id=EBB4F356BC1DC569F7CE909F7C0A1EFD0261B5C2&FORM=IQFRBA",
+        "name": "Mr Beast - Biography, Phone Number, House Address, Email Contact",
+        "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?id=OIP.0imKNLMIInv3jSBNKlPnNgAAAA&pid=Api",
+        "datePublished": "2020-09-02T11:02:00.0000000Z",
+        "contentUrl": "https:\/\/www.whatisaddress.com\/wp-content\/uploads\/2020\/07\/104108870_3667001303316489_5075676873457416442_n1-821x1024.jpg",
+        "hostPageUrl": "https:\/\/www.whatisaddress.com\/popular\/mr-beast\/",
+        "contentSize": "98286 B",
+        "encodingFormat": "jpeg",
+        "hostPageDisplayUrl": "https:\/\/www.whatisaddress.com\/popular\/mr-beast\/",
+        "width": 474,
+        "height": 591,
+        "thumbnail": {
+          "width": 474,
+          "height": 591
+        },
+        "insightsMetadata": {
+          "shoppingSourcesCount": 0,
+          "recipeSourcesCount": 0
+        }
+      },
+      {
+        "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=mr.+beast&id=78A9A8D86E682D28976A1635514AA5C28B15A7B2&FORM=IQFRBA",
+        "name": "MrBeast Net Worth (2021), Height, Age, Bio and Real Name",
+        "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?id=OIP.DZh6IReJJ-feyXyo4eY3RAHaHa&pid=Api",
+        "datePublished": "2021-05-25T21:07:00.0000000Z",
+        "contentUrl": "https:\/\/www.famousbirthsdeaths.com\/wp-content\/uploads\/2018\/05\/mr-beast-bio-net-worth-facts.jpg",
+        "hostPageUrl": "https:\/\/www.famousbirthsdeaths.com\/mr-beast-bio-net-worth-facts\/",
+        "contentSize": "49838 B",
+        "encodingFormat": "jpeg",
+        "hostPageDisplayUrl": "https:\/\/www.famousbirthsdeaths.com\/mr-beast-bio-net-worth-facts\/",
+        "width": 885,
+        "height": 885,
+        "thumbnail": {
+          "width": 474,
+          "height": 474
+        },
+        "insightsMetadata": {
+          "shoppingSourcesCount": 0,
+          "recipeSourcesCount": 0
+        }
+      },
+      {
+        "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=mr.+beast&id=4A96A8191AC95284B429D09C5720083C49A3397B&FORM=IQFRBA",
+        "name": "MrBeast Net Worth 2022 - How Much is He Worth? - FotoLog",
+        "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?id=OIP.dn0io5EvXtahEi72SgQKXwAAAA&pid=Api",
+        "datePublished": "2019-06-04T19:07:00.0000000Z",
+        "contentUrl": "https:\/\/www.fotolog.com\/wp-content\/uploads\/2019\/06\/Mr-Beast-Net-Worth.jpg",
+        "hostPageUrl": "https:\/\/www.fotolog.com\/mr-beast-net-worth\/",
+        "contentSize": "35263 B",
+        "encodingFormat": "jpeg",
+        "hostPageDisplayUrl": "https:\/\/www.fotolog.com\/mr-beast-net-worth\/",
+        "width": 474,
+        "height": 701,
+        "thumbnail": {
+          "width": 474,
+          "height": 701
+        },
+        "insightsMetadata": {
+          "shoppingSourcesCount": 0,
+          "recipeSourcesCount": 0
+        }
+      },
+      {
+        "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=mr.+beast&id=706B846255BFB995C0ACEF28120BEC58B4B2A065&FORM=IQFRBA",
+        "name": "Taxes Got You Down? MrBeast -- Who Gave Away More Than $1 Million Last Year -- Feels Your Pain ...",
+        "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?id=OIP.IyQlMNFJmwgriTIqoCD-awHaEj&pid=Api",
+        "datePublished": "2019-04-11T14:27:00.0000000Z",
+        "contentUrl": "https:\/\/www.tubefilter.com\/wp-content\/uploads\/2019\/04\/mrbeast.jpg",
+        "hostPageUrl": "https:\/\/www.tubefilter.com\/2019\/04\/11\/mr-beast-taxes-1-million-giveaways\/",
+        "contentSize": "327337 B",
+        "encodingFormat": "jpeg",
+        "hostPageDisplayUrl": "https:\/\/www.tubefilter.com\/2019\/04\/11\/mr-beast-taxes-1-million-giveaways\/",
+        "width": 1140,
+        "height": 701,
+        "thumbnail": {
+          "width": 474,
+          "height": 291
+        },
+        "insightsMetadata": {
+          "shoppingSourcesCount": 0,
+          "recipeSourcesCount": 0
+        }
+      },
+      {
+        "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=mr.+beast&id=FFC6D3D81CC0B7F8CE347658B7DD1AC1F91B5698&FORM=IQFRBA",
+        "name": "MrBeast, Charli D'Amelio and More Nab Big Streaming Award Noms | Den of Geek",
+        "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?id=OIP.5WkPlHO5eG1QYntJIefAmgHaEI&pid=Api",
+        "datePublished": "2020-10-22T10:25:00.0000000Z",
+        "contentUrl": "https:\/\/www.denofgeek.com\/wp-content\/uploads\/2020\/10\/mr-beast.jpg?fit=1437%2C803",
+        "hostPageUrl": "https:\/\/www.denofgeek.com\/culture\/streamy-awards-2020-nominations-mr-beast\/",
+        "contentSize": "153829 B",
+        "encodingFormat": "jpeg",
+        "hostPageDisplayUrl": "https:\/\/www.denofgeek.com\/culture\/streamy-awards-2020-nominations-mr-beast\/",
+        "width": 1437,
+        "height": 803,
+        "thumbnail": {
+          "width": 474,
+          "height": 264
+        },
+        "insightsMetadata": {
+          "shoppingSourcesCount": 0,
+          "recipeSourcesCount": 0
+        }
+      },
+      {
+        "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=mr.+beast&id=BB84108C9EF2606C51CF66022C9E12D24D6CED13&FORM=IQFRBA",
+        "name": "Mr. Beast Feral Challenges Archive | Wiki | Fer.al Amino",
+        "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?id=OIP.kgnWesHrInuC6YUWkGk7bAHaJ4&pid=Api",
+        "datePublished": "2020-06-16T18:56:00.0000000Z",
+        "contentUrl": "http:\/\/pm1.narvii.com\/7574\/d77a350c291d9e8f828d6c4e9e362823d1635012r1-1126-1502v2_uhq.jpg",
+        "hostPageUrl": "https:\/\/aminoapps.com\/c\/feral\/page\/item\/mr-beast-feral-challenges-archive\/YvdJ_gxTXIWeR35mXpgleV5xKEgLV0qXZ",
+        "contentSize": "74281 B",
+        "encodingFormat": "jpeg",
+        "hostPageDisplayUrl": "https:\/\/aminoapps.com\/c\/feral\/page\/item\/mr-beast-feral-challenges-archive\/YvdJ_gxTXIWeR35mXpgleV5xKEgLV0qXZ",
+        "width": 1126,
+        "height": 1502,
+        "thumbnail": {
+          "width": 474,
+          "height": 632
+        },
+        "insightsMetadata": {
+          "shoppingSourcesCount": 0,
+          "recipeSourcesCount": 0
+        }
+      },
+      {
+        "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=mr.+beast&id=07F8A84A805DBCA664B2CD91A22F06BEFF4A8717&FORM=IQFRBA",
+        "name": "Mr Beast shares his \"life goal\" is to own a League of Legends team - Not A Gamer",
+        "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?id=OIP.uvfqGuvhQmDjSj_n2z6vRwHaDt&pid=Api",
+        "datePublished": "2020-10-29T13:30:00.0000000Z",
+        "contentUrl": "https:\/\/notagamer.net\/wp-content\/uploads\/2020\/10\/mrbeast-league-of-legends-750x375.jpg",
+        "hostPageUrl": "https:\/\/notagamer.net\/mr-beast-wants-own-a-league-of-legends-team\/",
+        "contentSize": "30078 B",
+        "encodingFormat": "jpeg",
+        "hostPageDisplayUrl": "https:\/\/notagamer.net\/mr-beast-wants-own-a-league-of-legends-team\/",
+        "width": 750,
+        "height": 375,
+        "thumbnail": {
+          "width": 474,
+          "height": 237
+        },
+        "insightsMetadata": {
+          "shoppingSourcesCount": 0,
+          "recipeSourcesCount": 0
+        }
+      },
+      {
+        "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=mr.+beast&id=ADA3189B9EBA2992D1E6222BFF62A24E6FC7858A&FORM=IQFRBA",
+        "name": "Mr Beast Phone Number, House Address, Email, Contact Details",
+        "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?id=OIP.v1FuUI21Lpr1JFAHjunl3QAAAA&pid=Api",
+        "datePublished": "2020-08-28T01:48:00.0000000Z",
+        "contentUrl": "https:\/\/whatmobileno.com\/wp-content\/uploads\/2020\/08\/beast.jpg",
+        "hostPageUrl": "https:\/\/whatmobileno.com\/youtuber\/mr-beast-phone-number-email-house-address-contact\/",
+        "contentSize": "97815 B",
+        "encodingFormat": "jpeg",
+        "hostPageDisplayUrl": "https:\/\/whatmobileno.com\/youtuber\/mr-beast-phone-number-email-house-address-contact\/",
+        "width": 474,
+        "height": 591,
+        "thumbnail": {
+          "width": 474,
+          "height": 591
+        },
+        "insightsMetadata": {
+          "shoppingSourcesCount": 0,
+          "recipeSourcesCount": 0
+        }
+      },
+      {
+        "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=mr.+beast&id=5D9A21AFF89D891709A0976F15F1EEB8D1E24EF1&FORM=IQFRBA",
+        "name": "Mr Beast - Bio, Facts, Family | Famous Birthdays",
+        "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?id=OIP.GMvyrM392B8MnuEQrr0OTwAAAA&pid=Api",
+        "datePublished": "2018-04-08T19:37:00.0000000Z",
+        "contentUrl": "https:\/\/www.famousbirthdays.com\/faces\/mr-beast-image.jpg",
+        "hostPageUrl": "http:\/\/www.famousbirthdays.com\/people\/mr-beast.html",
+        "contentSize": "17298 B",
+        "encodingFormat": "jpeg",
+        "hostPageDisplayUrl": "http:\/\/www.famousbirthdays.com\/people\/mr-beast.html",
+        "width": 300,
+        "height": 300,
+        "thumbnail": {
+          "width": 300,
+          "height": 300
+        },
+        "insightsMetadata": {
+          "shoppingSourcesCount": 0,
+          "recipeSourcesCount": 0
+        }
+      },
+      {
+        "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=mr.+beast&id=0D40FE8E6EC69FF14D8E2DF8EABBE44805DD485F&FORM=IQFRBA",
+        "name": "Mr Beast Biography, Net Worth, Real Name, Career, Education, Family",
+        "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?id=OIP.-m79Meq1FOfZiLKuhRULKQHaHL&pid=Api",
+        "datePublished": "2021-09-03T00:31:00.0000000Z",
+        "contentUrl": "https:\/\/eafeed.com\/wp-content\/uploads\/2021\/06\/mr-beast.jpg",
+        "hostPageUrl": "https:\/\/eafeed.com\/mr-beast-biography-net-worth-real-name-career-education-family\/",
+        "contentSize": "102227 B",
+        "encodingFormat": "jpeg",
+        "hostPageDisplayUrl": "https:\/\/eafeed.com\/mr-beast-biography-net-worth-real-name-career-education-family\/",
+        "width": 1013,
+        "height": 981,
+        "thumbnail": {
+          "width": 474,
+          "height": 459
+        },
+        "insightsMetadata": {
+          "shoppingSourcesCount": 0,
+          "recipeSourcesCount": 0
+        }
+      },
+      {
+        "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=mr.+beast&id=8581062EAC18CDC9EDEE3375CD986EE863509B17&FORM=IQFRBA",
+        "name": "Mr Beast (Jimmy Donaldson) - Bio, Facts, Family Life of YouTuber & Vlogger",
+        "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?id=OIP.DiTyVw4z0yirY48J9_FrAgHaGL&pid=Api",
+        "datePublished": "2018-05-16T12:00:00.0000000Z",
+        "contentUrl": "https:\/\/www.thefamouspeople.com\/profiles\/images\/mr-beast-2.jpg",
+        "hostPageUrl": "https:\/\/www.thefamouspeople.com\/profiles\/mr-beast-40825.php",
+        "contentSize": "57068 B",
+        "encodingFormat": "jpeg",
+        "hostPageDisplayUrl": "https:\/\/www.thefamouspeople.com\/profiles\/mr-beast-40825.php",
+        "width": 900,
+        "height": 750,
+        "thumbnail": {
+          "width": 474,
+          "height": 395
+        },
+        "insightsMetadata": {
+          "shoppingSourcesCount": 0,
+          "recipeSourcesCount": 0
+        }
+      },
+      {
+        "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=mr.+beast&id=8581062EAC18CDC9EDEE103CAFE4960FEDFF5591&FORM=IQFRBA",
+        "name": "Mr Beast (Jimmy Donaldson) - Bio, Facts, Family Life of YouTuber & Vlogger",
+        "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?id=OIP.5F22ZQp_svPfP4wAq5GhTgHaGL&pid=Api",
+        "datePublished": "2018-05-16T12:00:00.0000000Z",
+        "contentUrl": "https:\/\/www.thefamouspeople.com\/profiles\/images\/mr-beast-1.jpg",
+        "hostPageUrl": "https:\/\/www.thefamouspeople.com\/profiles\/mr-beast-40825.php",
+        "contentSize": "65480 B",
+        "encodingFormat": "jpeg",
+        "hostPageDisplayUrl": "https:\/\/www.thefamouspeople.com\/profiles\/mr-beast-40825.php",
+        "width": 900,
+        "height": 750,
+        "thumbnail": {
+          "width": 474,
+          "height": 395
+        },
+        "insightsMetadata": {
+          "shoppingSourcesCount": 0,
+          "recipeSourcesCount": 0
+        }
+      },
+      {
+        "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=mr.+beast&id=B8785D7270DCD2788D1910131AF9803996B71781&FORM=IQFRBA",
+        "name": "Mr Beast put 100 players in an Among Us lobby and it actually worked - Dexerto",
+        "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?id=OIP.ve9-pzJDhlXP6OH2fxELVAHaEK&pid=Api",
+        "datePublished": "2021-02-24T23:08:00.0000000Z",
+        "contentUrl": "https:\/\/s3.amazonaws.com\/dexerto-assets-production-cbbdf288\/uploads\/2020\/10\/15151613\/MrBeast100PlayerAmongUs.jpg?w=479",
+        "hostPageUrl": "https:\/\/www.dexerto.com\/entertainment\/mr-beast-teases-100-player-among-us-lobby-1433141\/",
+        "contentSize": "199975 B",
+        "encodingFormat": "jpeg",
+        "hostPageDisplayUrl": "https:\/\/www.dexerto.com\/entertainment\/mr-beast-teases-100-player-among-us-lobby-1433141\/",
+        "width": 1600,
+        "height": 900,
+        "thumbnail": {
+          "width": 474,
+          "height": 266
+        },
+        "insightsMetadata": {
+          "shoppingSourcesCount": 0,
+          "recipeSourcesCount": 0
+        }
+      },
+      {
+        "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=mr.+beast&id=8581062EAC18CDC9EDEEF92D27310EE98FE3A7BF&FORM=IQFRBA",
+        "name": "Mr Beast (Jimmy Donaldson) - Bio, Facts, Family Life of YouTuber & Vlogger",
+        "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?id=OIP.IWuLSmpVNFBkF65MO7x-ygHaD4&pid=Api",
+        "datePublished": "2018-05-16T12:00:00.0000000Z",
+        "contentUrl": "https:\/\/www.thefamouspeople.com\/profiles\/images\/og-mr-beast-40825.jpg",
+        "hostPageUrl": "https:\/\/www.thefamouspeople.com\/profiles\/mr-beast-40825.php",
+        "contentSize": "41166 B",
+        "encodingFormat": "jpeg",
+        "hostPageDisplayUrl": "https:\/\/www.thefamouspeople.com\/profiles\/mr-beast-40825.php",
+        "width": 900,
+        "height": 472,
+        "thumbnail": {
+          "width": 474,
+          "height": 248
+        },
+        "insightsMetadata": {
+          "shoppingSourcesCount": 0,
+          "recipeSourcesCount": 0
+        }
+      },
+      {
+        "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=mr.+beast&id=D798860CDA53B177CED8D88DC9A3388CCE900F71&FORM=IQFRBA",
+        "name": "Mr Beast Song - YouTube",
+        "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?id=OIP.1QJuGg7ZeUdJLqtzm2kWGQHaEK&pid=Api",
+        "datePublished": "2020-01-07T16:36:00.0000000Z",
+        "contentUrl": "https:\/\/i.ytimg.com\/vi\/icb_8LMPpDg\/maxresdefault.jpg",
+        "hostPageUrl": "https:\/\/www.youtube.com\/watch?v=icb_8LMPpDg",
+        "contentSize": "82696 B",
+        "encodingFormat": "jpeg",
+        "hostPageDisplayUrl": "https:\/\/www.youtube.com\/watch?v=icb_8LMPpDg",
+        "width": 1280,
+        "height": 720,
+        "thumbnail": {
+          "width": 474,
+          "height": 266
+        },
+        "insightsMetadata": {
+          "shoppingSourcesCount": 0,
+          "recipeSourcesCount": 0
+        }
+      },
+      {
+        "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=mr.+beast&id=8F3D82A7A1612C8BB64711D2C7EDA91F4EC23FCF&FORM=IQFRBA",
+        "name": "Mr Beast: 10 Things You Didn't Know About | PB",
+        "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?id=OIP.tLPybGhWcrrK04sGqdN3zAHaEo&pid=Api",
+        "datePublished": "2021-10-06T18:47:00.0000000Z",
+        "contentUrl": "https:\/\/planbusinesses.com\/wp-content\/uploads\/2021\/10\/MrBeast-Logo.png",
+        "hostPageUrl": "https:\/\/planbusinesses.com\/mr-beast\/",
+        "contentSize": "53530 B",
+        "encodingFormat": "png",
+        "hostPageDisplayUrl": "https:\/\/planbusinesses.com\/mr-beast\/",
+        "width": 2000,
+        "height": 1250,
+        "thumbnail": {
+          "width": 474,
+          "height": 296
+        }
+      }
+    ]
+  },
+  "news": {
+    "id": "https:\/\/api.bing.microsoft.com\/api\/v7\/#News",
+    "readLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/news\/search?q=Mr.+Beast",
+    "value": [
+      {
+        "contractualRules": [
+          {
+            "_type": "ContractualRules\/TextAttribution",
+            "text": "Kotaku on MSN.com"
+          }
+        ],
+        "name": "YouTube Star Mr. Beast Says He Was 'Invited' On The Titanic Submarine",
+        "url": "https:\/\/www.msn.com\/en-us\/entertainment\/gaming\/youtube-star-mr-beast-says-he-was-invited-on-the-titanic-submarine\/ar-AA1d1zYm",
+        "image": {
+          "contentUrl": "https:\/\/i.kinja-img.com\/gawker-media\/image\/upload\/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200\/b355efe7d1d6549fa9741138b37e43ec.jpg",
+          "thumbnail": {
+            "contentUrl": "https:\/\/www.bing.com\/th?id=OVFT.fSlP0RjGJ7IZJ1dMw3RMuy&pid=News",
+            "width": 700,
+            "height": 393
+          }
+        },
+        "description": "Only a few days after the Titan was confirmed to have imploded at the bottom of the ocean, instantly vaporising all five passengers, Mr. Beast tweeted: “I was invited earlier this month to ride the titanic submarine,",
+        "about": [
+          {
+            "readLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/entities\/c6a7fb08-edb4-46bf-3aca-b5c65ac45981",
+            "name": "Submarine"
+          }
+        ],
+        "mentions": [
+          { "name": "Submarine" },
+          { "name": "RMS Titanic" },
+          { "name": "The A.V. Club" }
+        ],
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "Kotaku on MSN.com",
+            "image": { "thumbnail": { "contentUrl": "https:\/\/www.bing.com\/th?id=ODF.ldEeJT7cKOZcY47HQuvisg&pid=news" } }
+          }
+        ],
+        "datePublished": "2023-06-26T13:53:07.0000000Z",
+        "category": "ScienceAndTechnology"
+      },
+      {
+        "contractualRules": [
+          {
+            "_type": "ContractualRules\/TextAttribution",
+            "text": "Yahoo"
+          }
+        ],
+        "name": "Mr. Beast Turned Down an Invitation on the Ill-Fated Titan Submarine",
+        "url": "https:\/\/www.yahoo.com\/lifestyle\/mr-beast-turned-down-invitation-153238430.html",
+        "image": {
+          "contentUrl": "https:\/\/media.zenfs.com\/en\/men_s_journal_718\/aeee79a15fe5551ff336b10ad7e7b8f8",
+          "thumbnail": {
+            "contentUrl": "https:\/\/www.bing.com\/th?id=OVFT.oq0vy7xirWQHaz5VNtEnTy&pid=News",
+            "width": 620,
+            "height": 455
+          }
+        },
+        "description": "YouTube star Mr. Beast has gained a reputation for sharing the fruits of his labor with others, such as donating money to struggling fellow streamers and giving away clothing and meals to those in need.",
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "Yahoo",
+            "image": { "thumbnail": { "contentUrl": "https:\/\/www.bing.com\/th?id=ODF.UM0amhg3WAObCEGqc4w_Cw&pid=news" } }
+          }
+        ],
+        "datePublished": "2023-06-26T18:35:00.0000000Z"
+      },
+      {
+        "contractualRules": [
+          {
+            "_type": "ContractualRules\/TextAttribution",
+            "text": "Yahoo"
+          }
+        ],
+        "name": "Mr. Beast Claims He Almost Went on the Doomed Sub",
+        "url": "https:\/\/www.yahoo.com\/lifestyle\/mr-beast-claims-almost-went-172625349.html",
+        "image": {
+          "contentUrl": "https:\/\/media.zenfs.com\/en\/futurism_981\/7b55e7d5116a7d12bdd2ae5648368480",
+          "thumbnail": {
+            "contentUrl": "https:\/\/www.bing.com\/th?id=OVFT.47700f4l63ITWKhGqH8wnC&pid=News",
+            "width": 700,
+            "height": 367
+          }
+        },
+        "description": "Get Wrecked Uber-famous YouTube influencer MrBeast claims that a friend invited him to join the doomed trip down to tour the Titanic wreckage, but the way he explained it has us scratching our heads.",
+        "about": [
+          {
+            "readLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/entities\/c6a27489-9e3a-81ca-f3f1-c40a7944d38b",
+            "name": "Doomed"
+          }
+        ],
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "Yahoo",
+            "image": { "thumbnail": { "contentUrl": "https:\/\/www.bing.com\/th?id=ODF.UM0amhg3WAObCEGqc4w_Cw&pid=news" } }
+          }
+        ],
+        "datePublished": "2023-06-26T17:26:00.0000000Z",
+        "category": "ScienceAndTechnology"
+      },
+      {
+        "contractualRules": [
+          {
+            "_type": "ContractualRules\/TextAttribution",
+            "text": "Koimoi"
+          }
+        ],
+        "name": "‘Mr Beast’ Jimmy Donaldson Reveals He Was Invited To Ride The Doomed Titanic Tourist Submarine: “Kind Of Scary That I Could Have Been On It”",
+        "url": "https:\/\/www.koimoi.com\/hollywood-news\/mr-beast-jimmy-donaldson-reveals-he-was-invited-to-ride-the-doomed-titanic-tourist-submarine-kind-of-scary-that-i-could-have-been-on-itgrin-mr-beast-claims-he-snubbed-invite-to-travel-on-doom\/",
+        "image": {
+          "contentUrl": "https:\/\/static-koimoi.akamaized.net\/wp-content\/new-galleries\/2023\/06\/mr-beast-claims-he-snubbed-invite-to-travel-on-doomed-titanic-tourist-submarine-kind-of-scary-i-couldve-been-on-it.jpg",
+          "thumbnail": {
+            "contentUrl": "https:\/\/www.bing.com\/th?id=OVFT.eevRVU4-psAKB9K46bieIC&pid=News",
+            "width": 700,
+            "height": 367
+          }
+        },
+        "description": "Mr Beast' Jimmy Donaldson claims he snubbed an offer to travel on the doomed Titanic tourist submarine. Read on to know what he said",
+        "about": [
+          {
+            "readLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/entities\/14f9dd13-5a7a-440d-e95d-c64f24a95421",
+            "name": "Scary"
+          },
+          {
+            "readLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/entities\/e727c21e-767a-7ce0-15b1-e822c61e76ac",
+            "name": "Jimmy"
+          },
+          {
+            "readLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/entities\/404f187d-34c0-d101-63d9-32ca08a127a6",
+            "name": "Donaldson"
+          }
+        ],
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "Koimoi",
+            "image": { "thumbnail": { "contentUrl": "https:\/\/www.bing.com\/th?id=ODF.R_I_QVPvGWLDdkRpbsa3eg&pid=news" } }
+          }
+        ],
+        "datePublished": "2023-06-27T01:30:00.0000000Z"
+      },
+      {
+        "contractualRules": [
+          {
+            "_type": "ContractualRules\/TextAttribution",
+            "text": "Daily Express"
+          }
+        ],
+        "name": "Mr Beast said no to Titan sub invite - 'Kind of scary that I could have been on it'",
+        "url": "https:\/\/www.express.co.uk\/entertainment\/gaming\/1784794\/Mr-Beast-turned-down-Titan-sub-invite-scary",
+        "image": {
+          "contentUrl": "https:\/\/cdn.images.express.co.uk\/img\/dynamic\/143\/1200x712\/4825259.jpg?r=1687817142596",
+          "thumbnail": {
+            "contentUrl": "https:\/\/www.bing.com\/th?id=OVFT.hMCLBzp5j_EyAaYGF2n4fy&pid=News",
+            "width": 700,
+            "height": 415
+          }
+        },
+        "description": "YouTube star Mr. Beast turned down an invitation to be a passenger on the ill-fated Titan submersible, which killed five people when it imploded during a voyage to explore the wreckage of the Titanic.",
+        "about": [
+          {
+            "readLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/entities\/dcc9114a-9396-19bd-5d44-4bc794034484",
+            "name": "Gaming, Austria"
+          },
+          {
+            "readLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/entities\/a77fc12b-772e-4804-268d-9febd6126ab3",
+            "name": "Daily Express"
+          }
+        ],
+        "mentions": [
+          { "name": "Gaming, Austria" },
+          { "name": "Daily Express" },
+          { "name": "Entertainment" }
+        ],
+        "provider": [
+          {
+            "_type": "Organization",
+            "name": "Daily Express",
+            "image": { "thumbnail": { "contentUrl": "https:\/\/www.bing.com\/th?id=ODF.8EfL3f80GkcbewW9X07mYA&pid=news" } }
+          }
+        ],
+        "datePublished": "2023-06-26T22:05:00.0000000Z",
+        "category": "World"
+      }
+    ]
+  },
+  "relatedSearches": {
+    "id": "https:\/\/api.bing.microsoft.com\/api\/v7\/#RelatedSearches",
+    "value": [
+      {
+        "text": "youtube video mister beast",
+        "displayText": "youtube video mister beast",
+        "webSearchUrl": "https:\/\/www.bing.com\/search?q=youtube+video+mister+beast"
+      },
+      {
+        "text": "24 hours underwater mr beast",
+        "displayText": "24 hours underwater mr beast",
+        "webSearchUrl": "https:\/\/www.bing.com\/search?q=24+hours+underwater+mr+beast"
+      },
+      {
+        "text": "mr beasts newest video",
+        "displayText": "mr beasts newest video",
+        "webSearchUrl": "https:\/\/www.bing.com\/search?q=mr+beasts+newest+video"
+      },
+      {
+        "text": "mrbeast burger menu",
+        "displayText": "mrbeast burger menu",
+        "webSearchUrl": "https:\/\/www.bing.com\/search?q=mrbeast+burger+menu"
+      },
+      {
+        "text": "mr beast wikitubia",
+        "displayText": "mr beast wikitubia",
+        "webSearchUrl": "https:\/\/www.bing.com\/search?q=mr+beast+wikitubia"
+      },
+      {
+        "text": "mrbeast burgers",
+        "displayText": "mrbeast burgers",
+        "webSearchUrl": "https:\/\/www.bing.com\/search?q=mrbeast+burgers"
+      },
+      {
+        "text": "mrbeast youtube channel",
+        "displayText": "mrbeast youtube channel",
+        "webSearchUrl": "https:\/\/www.bing.com\/search?q=mrbeast+youtube+channel"
+      },
+      {
+        "text": "mr beast song",
+        "displayText": "mr beast song",
+        "webSearchUrl": "https:\/\/www.bing.com\/search?q=mr+beast+song"
+      }
+    ]
+  },
+  "videos": {
+    "id": "https:\/\/api.bing.microsoft.com\/api\/v7\/#Videos",
+    "readLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/videos\/search?q=Mr.+Beast",
+    "webSearchUrl": "https:\/\/www.bing.com\/videos\/search?q=Mr.+Beast",
+    "isFamilyFriendly": true,
+    "value": [
+      {
+        "webSearchUrl": "https:\/\/www.bing.com\/videos\/search?q=Mr.%20Beast&view=detail&mid=746B12C93356E0726C53746B12C93356E0726C53",
+        "name": "Kya Aap Lamborghini Lenge ya ye Ghar?",
+        "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?id=OVP.D_vVgTgZ9OlqXYi_JjroyAEsDh&pid=Api",
+        "datePublished": "2022-09-27T07:30:07.0000000",
+        "publisher": [ { "name": "YouTube" } ],
+        "creator": { "name": "MrBeast हिन्दी" },
+        "isAccessibleForFree": true,
+        "contentUrl": "https:\/\/www.youtube.com\/watch?v=W7BMI2RD6jU",
+        "hostPageUrl": "https:\/\/www.youtube.com\/watch?v=W7BMI2RD6jU",
+        "encodingFormat": "mp4",
+        "hostPageDisplayUrl": "https:\/\/www.youtube.com\/watch?v=W7BMI2RD6jU",
+        "width": 1920,
+        "height": 1080,
+        "motionThumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?id=OM2.U2xy4FYzyRJrdA&pid=Api",
+        "embedHtml": "<iframe width=\"1280\" height=\"720\" src=\"http:\/\/www.youtube.com\/embed\/W7BMI2RD6jU?autoplay=1\" frameborder=\"0\" allowfullscreen><\/iframe>",
+        "allowHttpsEmbed": true,
+        "viewCount": 8709867,
+        "thumbnail": {
+          "width": 300,
+          "height": 225
+        },
+        "allowMobileEmbed": true,
+        "isSuperfresh": false
+      },
+      {
+        "webSearchUrl": "https:\/\/www.bing.com\/videos\/search?q=Mr.%20Beast&view=detail&mid=8EAED8FCB1DD56DB18E48EAED8FCB1DD56DB18E4",
+        "name": "Mr Beast Blinds 1,000 People",
+        "description": "Mr Beast Blinds 1,000 People, unlike 1,000 Blind People See For The First Time, where Mr Beast cures blind people. He then proceeds to Hunt 100 people and celebrate having over 100 million subscribers. If you didn't know, this is actually a sequel to my last Mr Beast Saves the Ocean and If Mr Beast Made Squid game. Music By Diego Leal E https ...",
+        "thumbnailUrl": "https:\/\/tse4.mm.bing.net\/th?id=OVP.KSa5PGKAhX18ulqqsDtOuwHgFo&pid=Api",
+        "datePublished": "2023-03-14T21:34:09.0000000",
+        "publisher": [ { "name": "YouTube" } ],
+        "creator": { "name": "Avocado Animations" },
+        "isAccessibleForFree": true,
+        "contentUrl": "https:\/\/www.youtube.com\/watch?v=HV7ef2Y0bcE",
+        "hostPageUrl": "https:\/\/www.youtube.com\/watch?v=HV7ef2Y0bcE",
+        "encodingFormat": "mp4",
+        "hostPageDisplayUrl": "https:\/\/www.youtube.com\/watch?v=HV7ef2Y0bcE",
+        "width": 1920,
+        "height": 1080,
+        "duration": "PT6M43S",
+        "motionThumbnailUrl": "https:\/\/tse4.mm.bing.net\/th?id=OM1.5BjbVt2x_Niujg&pid=Api",
+        "embedHtml": "<iframe width=\"1280\" height=\"720\" src=\"http:\/\/www.youtube.com\/embed\/HV7ef2Y0bcE?autoplay=1\" frameborder=\"0\" allowfullscreen><\/iframe>",
+        "allowHttpsEmbed": true,
+        "viewCount": 10637008,
+        "thumbnail": {
+          "width": 160,
+          "height": 120
+        },
+        "allowMobileEmbed": true,
+        "isSuperfresh": false
+      },
+      {
+        "webSearchUrl": "https:\/\/www.bing.com\/videos\/search?q=Mr.%20Beast&view=detail&mid=88903B6454C27AE6F5DA88903B6454C27AE6F5DA",
+        "name": "The MrBeast MEGA-STUDIO Tour!",
+        "description": "The Complete MrBeast Studio Tour - including the team, camera gear, his Gaming PC, editing computers and MUCH MORE. The first 1,000 people to use this link will get a 1 month free trial of Skillshare: https:\/\/skl.sh\/mrwhosetheboss07221 Subscribe for more content (IT'S FREE) : https:\/\/goo.gl\/pLg6fE It would make my day if you could also follow ...",
+        "thumbnailUrl": "https:\/\/tse4.mm.bing.net\/th?id=OVP.oGBEG0LK75l8VdZWFJyDKgEsDh&pid=Api",
+        "datePublished": "2022-07-28T12:11:04.0000000",
+        "publisher": [ { "name": "YouTube" } ],
+        "creator": { "name": "Mrwhosetheboss" },
+        "isAccessibleForFree": true,
+        "contentUrl": "https:\/\/www.youtube.com\/watch?v=lUzpK0tGFcE",
+        "hostPageUrl": "https:\/\/www.youtube.com\/watch?v=lUzpK0tGFcE",
+        "encodingFormat": "mp4",
+        "hostPageDisplayUrl": "https:\/\/www.youtube.com\/watch?v=lUzpK0tGFcE",
+        "width": 3840,
+        "height": 1920,
+        "duration": "PT18M6S",
+        "motionThumbnailUrl": "https:\/\/tse4.mm.bing.net\/th?id=OM.2vXmesJUZDuQiA_1667769083&pid=Api",
+        "embedHtml": "<iframe width=\"1280\" height=\"720\" src=\"http:\/\/www.youtube.com\/embed\/lUzpK0tGFcE?autoplay=1\" frameborder=\"0\" allowfullscreen><\/iframe>",
+        "allowHttpsEmbed": true,
+        "viewCount": 21271450,
+        "thumbnail": {
+          "width": 160,
+          "height": 120
+        },
+        "allowMobileEmbed": true,
+        "isSuperfresh": false
+      },
+      {
+        "webSearchUrl": "https:\/\/www.bing.com\/videos\/search?q=Mr.%20Beast&view=detail&mid=A7DA08FA18C07D897F38A7DA08FA18C07D897F38",
+        "name": "MR BEAST in FORTNITE! (early)",
+        "description": "New Fortnite Chapter 4, Season 1 MrBeast skin early gameplay live stream with Typical Gamer! SUBSCRIBE! http:\/\/bit.ly\/SubToTG TG SHORTS! https:\/\/www.youtube.com\/channel\/UCWWwXggCAv3pm7gR-i88P2Q Use my Support a Creator code \"TypicalGamer\" in the Fortnite item shop if you'd like to support me! Donate! https:\/\/streamlabs.com\/typicalgamer Become a ...",
+        "thumbnailUrl": "https:\/\/tse2.mm.bing.net\/th?id=OVP.3YiH0WqVjtiE4JCtyoSK1QEsDh&pid=Api",
+        "datePublished": "2022-12-14T09:32:29.0000000",
+        "publisher": [ { "name": "YouTube" } ],
+        "creator": { "name": "Typical Gamer" },
+        "isAccessibleForFree": true,
+        "contentUrl": "https:\/\/www.youtube.com\/watch?v=vhmUa9FuUpA",
+        "hostPageUrl": "https:\/\/www.youtube.com\/watch?v=vhmUa9FuUpA",
+        "encodingFormat": "mp4",
+        "hostPageDisplayUrl": "https:\/\/www.youtube.com\/watch?v=vhmUa9FuUpA",
+        "width": 2560,
+        "height": 1440,
+        "duration": "PT3H50M16S",
+        "motionThumbnailUrl": "https:\/\/tse2.mm.bing.net\/th?id=OM.OH-JfcAY-gjapw&pid=Api",
+        "embedHtml": "<iframe width=\"1280\" height=\"720\" src=\"http:\/\/www.youtube.com\/embed\/vhmUa9FuUpA?autoplay=1\" frameborder=\"0\" allowfullscreen><\/iframe>",
+        "allowHttpsEmbed": true,
+        "viewCount": 3465849,
+        "thumbnail": {
+          "width": 160,
+          "height": 120
+        },
+        "allowMobileEmbed": true,
+        "isSuperfresh": false
+      },
+      {
+        "webSearchUrl": "https:\/\/www.bing.com\/videos\/search?q=Mr.%20Beast&view=detail&mid=B6009C4678A2324307C6B6009C4678A2324307C6",
+        "name": "SIDEMEN VS MR BEAST $1,000,000 CHALLENGE",
+        "description": "Mr Beast takes on the Sidemen in a series of $1,000,000 challenges! Mr Beast: https:\/\/www.youtube.com\/user\/MrBeast6000 🍗: Order food NOW at: https:\/\/www.eatsides.com\/ 🎥: Access exclusive content at: https:\/\/www.sideplus.com\/ 🍹: XIX Vodka: https:\/\/www.xixvodka.com\/ 👉🏻: Subscribe to our Reacts Channel: https:\/\/www.youtube.com ...",
+        "thumbnailUrl": "https:\/\/tse2.mm.bing.net\/th?id=OVP.N5ppoh9j4nYo2_6g1BnU-gEsDh&pid=Api",
+        "datePublished": "2022-10-16T18:23:41.0000000",
+        "publisher": [ { "name": "YouTube" } ],
+        "creator": { "name": "Sidemen" },
+        "isAccessibleForFree": true,
+        "contentUrl": "https:\/\/www.youtube.com\/watch?v=7XnlcNfgllA",
+        "hostPageUrl": "https:\/\/www.youtube.com\/watch?v=7XnlcNfgllA",
+        "encodingFormat": "mp4",
+        "hostPageDisplayUrl": "https:\/\/www.youtube.com\/watch?v=7XnlcNfgllA",
+        "width": 3840,
+        "height": 2160,
+        "duration": "PT25M40S",
+        "motionThumbnailUrl": "https:\/\/tse2.mm.bing.net\/th?id=OM.xgdDMqJ4RpwAtg&pid=Api",
+        "embedHtml": "<iframe width=\"1280\" height=\"720\" src=\"http:\/\/www.youtube.com\/embed\/7XnlcNfgllA?autoplay=1\" frameborder=\"0\" allowfullscreen><\/iframe>",
+        "allowHttpsEmbed": true,
+        "viewCount": 25333539,
+        "thumbnail": {
+          "width": 160,
+          "height": 120
+        },
+        "allowMobileEmbed": true,
+        "isSuperfresh": false
+      },
+      {
+        "webSearchUrl": "https:\/\/www.bing.com\/videos\/search?q=Mr.%20Beast&view=detail&mid=C8CA6ECA2B2663CE053BC8CA6ECA2B2663CE053B",
+        "name": "Evil Mr. Beast (ft Mr Beast) | TMG - Episode 260",
+        "description": "Bonus Episodes & Ad Free Episodes: https:\/\/tmgstudios.tv (Evil) Mr Beast himself beams up for this one. He shares why he isn’t materialistic despite hugely profiting off the creator economy, offers Cody and Noel a trillion dollars to seriously put their bromance to the test and faces tax implications from his extravagant prize giveaways If ...",
+        "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?id=OVP.i8jhy-h1qEhSAEIsO8VU7gEsDh&pid=Api",
+        "datePublished": "2022-10-06T00:15:52.0000000",
+        "publisher": [ { "name": "YouTube" } ],
+        "creator": { "name": "TMG Studios" },
+        "isAccessibleForFree": true,
+        "contentUrl": "https:\/\/www.youtube.com\/watch?v=YhRRny_sHYw",
+        "hostPageUrl": "https:\/\/www.youtube.com\/watch?v=YhRRny_sHYw",
+        "encodingFormat": "mp4",
+        "hostPageDisplayUrl": "https:\/\/www.youtube.com\/watch?v=YhRRny_sHYw",
+        "width": 3840,
+        "height": 2160,
+        "duration": "PT1H30M14S",
+        "motionThumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?id=OM1.OwXOYyYrym7KyA&pid=Api",
+        "embedHtml": "<iframe width=\"1280\" height=\"720\" src=\"http:\/\/www.youtube.com\/embed\/YhRRny_sHYw?autoplay=1\" frameborder=\"0\" allowfullscreen><\/iframe>",
+        "allowHttpsEmbed": true,
+        "viewCount": 2005817,
+        "thumbnail": {
+          "width": 160,
+          "height": 120
+        },
+        "allowMobileEmbed": true,
+        "isSuperfresh": false
+      },
+      {
+        "webSearchUrl": "https:\/\/www.bing.com\/videos\/search?q=Mr.%20Beast&view=detail&mid=A9DBBE91E7ADEE7EE14AA9DBBE91E7ADEE7EE14A",
+        "name": "The Freest 100K in a Mr Beast Video",
+        "description": "From this Mr Beast Video: https:\/\/www.youtube.com\/watch?v=YLt73w6criQ Watch Mr Beast Content: Main: https:\/\/www.youtube.com\/@MrBeast Philantropy: https:\/\/www.youtube.com\/@BeastPhilanthropy Gaming: https:\/\/www.youtube.com\/@MrBeastGaming Reacts: https:\/\/www.youtube.com\/@BeastReacts MrBeast2: https:\/\/www.youtube.com\/@MrBeast2 This is not an ...",
+        "thumbnailUrl": "https:\/\/tse4.mm.bing.net\/th?id=OVP.ZQ0arOU_exUVsCktTkbuwAEkII&pid=Api",
+        "datePublished": "2023-04-23T16:00:30.0000000",
+        "publisher": [ { "name": "YouTube" } ],
+        "creator": { "name": "Mr. Beast Clips" },
+        "isAccessibleForFree": true,
+        "contentUrl": "https:\/\/www.youtube.com\/watch?v=WrfAuBAIDGg",
+        "hostPageUrl": "https:\/\/www.youtube.com\/watch?v=WrfAuBAIDGg",
+        "encodingFormat": "mp4",
+        "hostPageDisplayUrl": "https:\/\/www.youtube.com\/watch?v=WrfAuBAIDGg",
+        "width": 1080,
+        "height": 1920,
+        "duration": "PT15S",
+        "motionThumbnailUrl": "https:\/\/tse4.mm.bing.net\/th?id=OM2.SuF-7q3nkb7bqQ_1685563477&pid=Api",
+        "embedHtml": "<iframe width=\"1280\" height=\"720\" src=\"http:\/\/www.youtube.com\/embed\/WrfAuBAIDGg?autoplay=1\" frameborder=\"0\" allowfullscreen><\/iframe>",
+        "allowHttpsEmbed": true,
+        "viewCount": 1342,
+        "thumbnail": {
+          "width": 89,
+          "height": 160
+        },
+        "allowMobileEmbed": true,
+        "isSuperfresh": false
+      },
+      {
+        "webSearchUrl": "https:\/\/www.bing.com\/videos\/search?q=Mr.%20Beast&view=detail&mid=F91B9E05ABCAE7A599F9F91B9E05ABCAE7A599F9",
+        "name": "MR BEAST IS STANDING BY CHRIS",
+        "description": "Chris Tyson, one of the leads in MrBeast's videos, recently came out as trans and being on HRT. Right wing freaks proceeded to do what right wing freaks do, and Jimmy (MrBeast) is standing by his friend Chris. *Chris uses any pronouns* Live everyday at https:\/\/www.twitch.tv\/hasanabi Edited by: https:\/\/twitter.com\/WillBarker__ Other Links TikTok ...",
+        "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?id=OVP.3T3-G6mb_pruVpJmQ3MxdwHgFo&pid=Api",
+        "datePublished": "2023-04-14T07:13:42.0000000",
+        "publisher": [ { "name": "YouTube" } ],
+        "creator": { "name": "HasanAbi" },
+        "isAccessibleForFree": true,
+        "contentUrl": "https:\/\/www.youtube.com\/watch?v=QOS0IH7rDuc",
+        "hostPageUrl": "https:\/\/www.youtube.com\/watch?v=QOS0IH7rDuc",
+        "encodingFormat": "mp4",
+        "hostPageDisplayUrl": "https:\/\/www.youtube.com\/watch?v=QOS0IH7rDuc",
+        "width": 1920,
+        "height": 1080,
+        "duration": "PT31M6S",
+        "motionThumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?id=OM2.-Zml58qrBZ4b-Q&pid=Api",
+        "embedHtml": "<iframe width=\"1280\" height=\"720\" src=\"http:\/\/www.youtube.com\/embed\/QOS0IH7rDuc?autoplay=1\" frameborder=\"0\" allowfullscreen><\/iframe>",
+        "allowHttpsEmbed": true,
+        "viewCount": 654069,
+        "thumbnail": {
+          "width": 160,
+          "height": 120
+        },
+        "allowMobileEmbed": true,
+        "isSuperfresh": false
+      },
+      {
+        "webSearchUrl": "https:\/\/www.bing.com\/videos\/search?q=Mr.%20Beast&view=detail&mid=2964DEB557BC91FAE1C12964DEB557BC91FAE1C1",
+        "name": "Mr Beast Challenge 😂 #shorts",
+        "description": "*Mr Beast Challenge in BeamNG Drive* 😂 BEST SHORTS - https:\/\/youtube.com\/watch?v=Q-lPMzoqT4E&list=PLLtQvCmqEWgHLRqPQsjMPS44bAZxIcKAH Car game _Beamng Drive_ #cars #beamngdrive #shorts",
+        "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?id=OVP.OxbauKv2cHj5aQl33RHUUQEkII&pid=Api",
+        "datePublished": "2023-02-10T21:30:02.0000000",
+        "publisher": [ { "name": "YouTube" } ],
+        "creator": { "name": "BeamngShorts" },
+        "isAccessibleForFree": true,
+        "contentUrl": "https:\/\/www.youtube.com\/watch?v=DIxAgMXzaPU",
+        "hostPageUrl": "https:\/\/www.youtube.com\/watch?v=DIxAgMXzaPU",
+        "encodingFormat": "mp4",
+        "hostPageDisplayUrl": "https:\/\/www.youtube.com\/watch?v=DIxAgMXzaPU",
+        "width": 1080,
+        "height": 1920,
+        "duration": "PT19S",
+        "motionThumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?id=OM1.weH6kbxXtd5kKQ&pid=Api",
+        "embedHtml": "<iframe width=\"1280\" height=\"720\" src=\"http:\/\/www.youtube.com\/embed\/DIxAgMXzaPU?autoplay=1\" frameborder=\"0\" allowfullscreen><\/iframe>",
+        "allowHttpsEmbed": true,
+        "viewCount": 17393618,
+        "thumbnail": {
+          "width": 89,
+          "height": 160
+        },
+        "allowMobileEmbed": true,
+        "isSuperfresh": false
+      },
+      {
+        "webSearchUrl": "https:\/\/www.bing.com\/videos\/search?q=Mr.%20Beast&view=detail&mid=2C02477E50179AEDA3642C02477E50179AEDA364",
+        "name": "MR BEAST PASSED COMMENTS ON ISLAM",
+        "description": "️ Join Sense Islam Membership on Patreon: https:\/\/www.patreon.com\/senseislam ️ Join Sense Islam On YouTube: https:\/\/www.youtube.com\/channel\/UCULN4pFp-FlahCVfTNEE3BA\/join ️ Support Us Through PayPal: https:\/\/www.paypal.me\/senseislam ️ *FOLLOW ME ON INSTAGRAM:* https:\/\/instagram.com\/senseislam?igshid=1cvmse3i9e1j3 #mrbeast #islam #muslim",
+        "thumbnailUrl": "https:\/\/tse4.mm.bing.net\/th?id=OVP.ijTc-wPQiOo9l2nJuSnpcQHgFo&pid=Api",
+        "datePublished": "2023-04-22T14:40:10.0000000",
+        "publisher": [ { "name": "YouTube" } ],
+        "creator": { "name": "Sense Islam" },
+        "isAccessibleForFree": true,
+        "contentUrl": "https:\/\/www.youtube.com\/watch?v=yv4kLWodWW0",
+        "hostPageUrl": "https:\/\/www.youtube.com\/watch?v=yv4kLWodWW0",
+        "encodingFormat": "mp4",
+        "hostPageDisplayUrl": "https:\/\/www.youtube.com\/watch?v=yv4kLWodWW0",
+        "width": 1920,
+        "height": 1080,
+        "duration": "PT6M30S",
+        "motionThumbnailUrl": "https:\/\/tse4.mm.bing.net\/th?id=OM1.ZKPtmhdQfkcCLA&pid=Api",
+        "embedHtml": "<iframe width=\"1280\" height=\"720\" src=\"http:\/\/www.youtube.com\/embed\/yv4kLWodWW0?autoplay=1\" frameborder=\"0\" allowfullscreen><\/iframe>",
+        "allowHttpsEmbed": true,
+        "viewCount": 928164,
+        "thumbnail": {
+          "width": 160,
+          "height": 120
+        },
+        "allowMobileEmbed": true,
+        "isSuperfresh": false
+      },
+      {
+        "webSearchUrl": "https:\/\/www.bing.com\/videos\/search?q=Mr.%20Beast&view=detail&mid=E5BF38B2ACA9F8769FE2E5BF38B2ACA9F8769FE2",
+        "name": "Funniest Fails On The Internet!",
+        "description": "subscribe for good luck lol CHECK OUT THESE CHANNELS OR ELSE Fandom https:\/\/www.instagram.com\/reel\/Ci-H-wkgVsc\/?igshid=YWJhMjlhZTc= Nickymca https:\/\/www.youtube.com\/watch?v=KBxSntGGm8U Collab https:\/\/vl.collab.inc\/videos\/205794 RM_Videos https:\/\/www.youtube.com\/shorts\/r-pHOKifJ0c Storyful Viral https:\/\/www.youtube.com\/watch?v=icZZKMAnjRQ ...",
+        "thumbnailUrl": "https:\/\/tse2.mm.bing.net\/th?id=OVP.K-MOx-5qlCSCy1xXj1Y1cwEsDh&pid=Api",
+        "datePublished": "2023-02-14T21:00:15.0000000",
+        "publisher": [ { "name": "YouTube" } ],
+        "creator": { "name": "Beast Reacts" },
+        "isAccessibleForFree": true,
+        "contentUrl": "https:\/\/www.youtube.com\/watch?v=IYjSmlWG-4A",
+        "hostPageUrl": "https:\/\/www.youtube.com\/watch?v=IYjSmlWG-4A",
+        "encodingFormat": "mp4",
+        "hostPageDisplayUrl": "https:\/\/www.youtube.com\/watch?v=IYjSmlWG-4A",
+        "width": 1920,
+        "height": 1080,
+        "duration": "PT8M2S",
+        "motionThumbnailUrl": "https:\/\/tse2.mm.bing.net\/th?id=OM2.4p92-Kmssji_5Q&pid=Api",
+        "embedHtml": "<iframe width=\"1280\" height=\"720\" src=\"http:\/\/www.youtube.com\/embed\/IYjSmlWG-4A?autoplay=1\" frameborder=\"0\" allowfullscreen><\/iframe>",
+        "allowHttpsEmbed": true,
+        "viewCount": 11326228,
+        "thumbnail": {
+          "width": 160,
+          "height": 120
+        },
+        "allowMobileEmbed": true,
+        "isSuperfresh": false
+      }
+    ],
+    "scenario": "List"
+  },
+  "rankingResponse": {
+    "mainline": {
+      "items": [
+        {
+          "answerType": "Videos",
+          "value": { "id": "https:\/\/api.bing.microsoft.com\/api\/v7\/#Videos" }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 0,
+          "value": { "id": "https:\/\/api.bing.microsoft.com\/api\/v7\/#WebPages.0" }
+        },
+        {
+          "answerType": "News",
+          "value": { "id": "https:\/\/api.bing.microsoft.com\/api\/v7\/#News" }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 1,
+          "value": { "id": "https:\/\/api.bing.microsoft.com\/api\/v7\/#WebPages.1" }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 2,
+          "value": { "id": "https:\/\/api.bing.microsoft.com\/api\/v7\/#WebPages.2" }
+        },
+        {
+          "answerType": "Images",
+          "value": { "id": "https:\/\/api.bing.microsoft.com\/api\/v7\/#Images" }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 3,
+          "value": { "id": "https:\/\/api.bing.microsoft.com\/api\/v7\/#WebPages.3" }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 4,
+          "value": { "id": "https:\/\/api.bing.microsoft.com\/api\/v7\/#WebPages.4" }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 5,
+          "value": { "id": "https:\/\/api.bing.microsoft.com\/api\/v7\/#WebPages.5" }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 6,
+          "value": { "id": "https:\/\/api.bing.microsoft.com\/api\/v7\/#WebPages.6" }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 7,
+          "value": { "id": "https:\/\/api.bing.microsoft.com\/api\/v7\/#WebPages.7" }
+        },
+        {
+          "answerType": "WebPages",
+          "resultIndex": 8,
+          "value": { "id": "https:\/\/api.bing.microsoft.com\/api\/v7\/#WebPages.8" }
+        },
+        {
+          "answerType": "RelatedSearches",
+          "value": { "id": "https:\/\/api.bing.microsoft.com\/api\/v7\/#RelatedSearches" }
+        }
+      ]
+    },
+    "sidebar": {
+      "items": [
+        { "answerType": "Images" },
+        {
+          "answerType": "Entities",
+          "resultIndex": 0,
+          "value": { "id": "https:\/\/api.bing.microsoft.com\/api\/v7\/#Entities.0" }
+        }
+      ]
+    }
+  }
+}
