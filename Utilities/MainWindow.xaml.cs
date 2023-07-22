@@ -59,5 +59,10 @@ namespace Utilities
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void talkingAIButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

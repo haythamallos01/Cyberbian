@@ -8,6 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Button x:Name="parseLinksButton" Content="Parse Links" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="137" Click="parseLinksButton_Click"/>
+        <Button Name="talkingAIButton" Content="Talking Avatar" HorizontalAlignment="Left" Margin="152,10,0,0" VerticalAlignment="Top" Height="20" Width="130" Click="talkingAIButton_Click"/>
 
     </Grid>
 </Window>
