@@ -1,6 +1,7 @@
 ﻿using CyberbianSite.Client.Models;
 using CyberbianSite.Client.Services;
 using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Components.Web;
 
 namespace CyberbianSite.Client.Pages
@@ -84,7 +85,37 @@ PersonaClone can be integrated with popular messaging apps, social media platfor
 
         [Inject]
         public OpenAIService OpenAIService { get; set; }
+        [Inject]
+        public DIDService DidService  { get; set; }
 
         public List<Message> Messages => _conversationHistory.Where(c => c.role is not "system").ToList();
+
+        private string? ImageUri;
+        private string? FirstName;
+        public async Task LoadImage(InputFileChangeEventArgs inputFileChangeEventArgs)
+        {
+            var image = await inputFileChangeEventArgs.File.RequestImageFileAsync("image/png", 600, 600);
+
+            using Stream imageStream = image.OpenReadStream(1024 * 1024 * 10);
+
+            using MemoryStream ms = new();
+            //copy imageStream to Memory stream
+            await imageStream.CopyToAsync(ms);
+
+            //convert stream to base64
+            ImageUri = $"data:image/png;base64,{Convert.ToBase64String(ms.ToArray())}";
+            StateHasChanged();
+
+        }
+
+        protected void onChangeName()
+        {
+            StateHasChanged();
+        }
+        protected async Task OnSubmitCreatePersona()
+        {
+            //var clipsActorsResponse = await DidService.GetClipsActors();
+
+        }
     }
 }

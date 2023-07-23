@@ -64,6 +64,7 @@
                 </div>
                 @if(_isNewBot)
                 {
+                    <hr />
                     <div class="text-center">
                         <label>Nice, will get started.  Upload a quality photo clearly showing your face as in the photo example below.  The photo will be used to clone your avatar.</label>
                     </div>
@@ -71,10 +72,38 @@
                         <img src="assets/images/bot/sample-clone-image.png" class="img-rounded" alt="Sample Image" style="width:  100px">
                         <br/>
                         <label>Sample</label>
-                    </div>
 
+                        <RadzenCard>
+                            <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Upload your photo</RadzenText>
+                            <InputFile OnChange="LoadImage" Accept="image/*" />
+
+                            <img src="@ImageUri" Style="width: 15rem;" />
+
+                        </RadzenCard>
+                    </div>
+                    <hr/>
+                    @if(ImageUri != null)
+                    {
+                        <div class="text-left">
+                            <label>One last thing, please enter your first name.</label>
+                        </div>
+                        <div class="mb-3">
+                            <label>First Name</label>
+                            <InputText @bind-Value="FirstName" onchange="onChangeName" />
+                        </div>
+                    }
+
+                    @if ((ImageUri != null) && (!string.IsNullOrEmpty(FirstName)))
+                    {
+                        <hr />
+                        <div class="text-center">
+                            <button type="submit" @onclick="OnSubmitCreatePersona">Create my companion</button>
+                        </div>
+                    }
                 }
             </div>
         </div>
     </div>
 </div>
+
+                       
