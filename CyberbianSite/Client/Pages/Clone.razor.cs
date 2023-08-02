@@ -1,5 +1,8 @@
 ﻿using CyberbianSite.Client.Models;
+using CyberbianSite.Client.Models.DID.Talks.Request;
+using CyberbianSite.Client.Models.DID.Talks.Response;
 using CyberbianSite.Client.Services;
+using CyberbianSite.Shared;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Components.Web;
@@ -9,6 +12,7 @@ namespace CyberbianSite.Client.Pages
     public partial class Clone
     {
         private string _userQuestion = string.Empty;
+        private string _interactionId = string.Empty;
         private readonly List<Message> _conversationHistory = new();
         private bool _isSendingMessage;
         //private readonly string _chatBotKnowledgeScope = "" +
@@ -35,6 +39,7 @@ PersonaClone can be integrated with popular messaging apps, social media platfor
         protected override Task OnInitializedAsync()
         {
             _conversationHistory.Add(new Message { role = "system", content = _chatBotKnowledgeScope });
+            _interactionId = Guid.NewGuid().ToString();
             return base.OnInitializedAsync();
         }
 
@@ -86,7 +91,9 @@ PersonaClone can be integrated with popular messaging apps, social media platfor
         [Inject]
         public OpenAIService OpenAIService { get; set; }
         [Inject]
-        public DIDService DidService  { get; set; }
+        public DIDService DidService { get; set; }
+        [Inject]
+        public AzureService AzureService { get; set; }
 
         public List<Message> Messages => _conversationHistory.Where(c => c.role is not "system").ToList();
 
@@ -114,8 +121,39 @@ PersonaClone can be integrated with popular messaging apps, social media platfor
         }
         protected async Task OnSubmitCreatePersona()
         {
-            //var clipsActorsResponse = await DidService.GetClipsActors();
+            DIDTalksRequest didTalksRequest = new DIDTalksRequest();
+            try
+            {
+                // Upload image to the cloud
+                var clipsActorsResponse = await DidService.GetClipsActors();
 
+                didTalksRequest.source_url = clipsActorsResponse.actors[0].image_url;
+                didTalksRequest.script = new Models.DID.Talks.Request.Script();
+                didTalksRequest.script.type = "text";
+                //didTalksRequest.script.input = "Hello " + FirstName + ".  I want to be your personal companion.  Are you okay with it?";
+                didTalksRequest.script.input = "Hello";
+                Models.DID.Talks.Request.Expression expression = new Models.DID.Talks.Request.Expression();
+                expression.start_frame = 0;
+                expression.expression = "surprise";
+                expression.intensity = 1;
+                didTalksRequest.config = new Models.DID.Talks.Request.Config();
+                didTalksRequest.config.driver_expressions = new Models.DID.Talks.Request.Driver_Expressions();
+                didTalksRequest.config.driver_expressions.expressions = new Models.DID.Talks.Request.Expression[1] { expression };
+
+                //var didTalksResponse = await DidService.PostTalks(didTalksRequest);
+                DIDTalksIdResponse didTalksIdResponse = await DidService.GetTalksById("tlk_IEJ2y0IIu6IRZSyisIQQW");
+
+                //if (didTalksResponse != null)
+                //{
+                //    DIDTalksIdResponse didTalksIdResponse = await DidService.GetTalksById(didTalksResponse.id, 5000);
+                //    string jsonString = JsonConvert.SerializeObject(didTalksIdResponse);
+
+                //}
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
     }
 }

@@ -1,0 +1,30 @@
+﻿@page "/dashboard"
+@inject IJSRuntime js
+@attribute [Authorize(Roles = "Administrator, User")]
+@using CyberbianSite.Client.Authentication
+@using CyberbianSite.Shared
+@using System.Net.Http.Headers
+@inject HttpClient Http
+@inject AuthenticationStateProvider authenticationStateProvider
+@inject NavigationManager navManager
+
+<PageTitle>Dashboard</PageTitle>
+
+<AuthorizeView>
+    <Authorized>
+        <br /><br />
+        <button class="btn btn-outline-primary" @onclick="DisplayGreetingAlert">Display Greeting Alert</button>
+    </Authorized>
+</AuthorizeView>
+
+@code {
+    [CascadingParameter]
+    private Task<AuthenticationState> authenticationState { get; set; }
+
+    private async Task DisplayGreetingAlert()
+    {
+        var authState = await authenticationState;
+        var message = $"Hello {authState.User.Identity.Name}";
+        await js.InvokeVoidAsync("alert", message);
+    }
+}

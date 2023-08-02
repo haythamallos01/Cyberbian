@@ -26,7 +26,6 @@ namespace SearchAPI
 
             // Construct the URI of the search request
             var uriQuery = endpoint + "?q=" + Uri.EscapeDataString(query);
-
             // Perform the Web request and get the response
             WebRequest request = HttpWebRequest.Create(uriQuery);
             request.Headers["Ocp-Apim-Subscription-Key"] = subscriptionKey;

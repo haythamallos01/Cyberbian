@@ -1,4 +1,9 @@
-﻿    <!--Full width header Start-->
+﻿@using CyberbianSite.Client.Authentication
+@inject AuthenticationStateProvider authStateProvider
+@inject NavigationManager navManager
+
+<!--Full width header Start-->
+<div class="top-row px-4">
 <div id="rs-head" class="full-width-header">
     <!--Header Start-->
     <header id="rs-header" class="rs-header transparent-header">
@@ -6,16 +11,6 @@
         <div class="menu-area menu-sticky">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-2">
-                        <label style="font-size: 24px">Cyberbian</label>
-@*                        <div class="logo-area">
-                            <a class="logo" href="index.html">
-                                <img height="100" src="assets/images/logo-cyberbian.png" alt="logo">
-
-                        
-                        </a>
-                        </div>*@
-                    </div>
                     <div class="col-lg-10 text-right">
                         <div class="rs-menu-area">
                             <div class="main-menu">
@@ -27,9 +22,10 @@
                                 <nav class="rs-menu">
                                     <ul class="nav-menu">
                                         <!-- Home -->
-                                        <li class="current-menu-item current_page_item"> <a href="FamousBot">Play "Guess the Famous Bot"</a></li>
+                                        <li class="current-menu-item current_page_item"> <a href="/">Home</a></li>
+                                        @*                                        <li class="current-menu-item current_page_item"> <a href="FamousBot">Play "Guess the Famous Bot"</a></li>
                                         <li class="current-menu-item current_page_item"> <a href="Veteran">Veteran Assistant</a></li>
-@*                                        <li class="current-menu-item current_page_item"> <a href="Register">Register</a></li>
+                                        <li class="current-menu-item current_page_item"> <a href="Register">Register</a></li>
 *@                                        <!-- End Home -->
 
                                     </ul> <!-- //.nav-menu -->
@@ -46,3 +42,4 @@
     <!--Header End-->
 </div>
 <!--Full width header End-->
+</div>
