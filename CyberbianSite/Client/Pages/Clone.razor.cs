@@ -92,8 +92,6 @@ PersonaClone can be integrated with popular messaging apps, social media platfor
         public OpenAIService OpenAIService { get; set; }
         [Inject]
         public DIDService DidService { get; set; }
-        [Inject]
-        public AzureService AzureService { get; set; }
 
         public List<Message> Messages => _conversationHistory.Where(c => c.role is not "system").ToList();
 

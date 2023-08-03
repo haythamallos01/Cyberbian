@@ -5,26 +5,15 @@
 
 
 
-<NavMenu2/>
+<NavMenu/>
 <div class="page">
-
-    <main>
-
-            @*  <a href="/">Home</a>
-            <AuthorizeView>
-            <Authorized>
-            <a @onclick="Logout" href="javascript:void(0)">Logout</a>
-            </Authorized>
-            <NotAuthorized>
-            <a href="/login">Login</a>
-            </NotAuthorized>
-            </AuthorizeView>*@
-       
+    <main>       
         <article class="content px-4">
             @Body
         </article>
     </main>
 </div>
+<Footer/>
 
 @code {
     private async Task Logout()
@@ -34,9 +23,4 @@
         navManager.NavigateTo("/", true);
     }
 }
-@*@inherits LayoutComponentBase
-
-<main>
-    @Body
-</main>*@
 

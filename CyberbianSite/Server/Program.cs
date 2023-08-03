@@ -1,7 +1,8 @@
+global using CyberbianSite.Shared;
+using CyberbianSite.Client.Config;
 using CyberbianSite.Server.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
-using Microsoft.AspNetCore.ResponseCompression;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -26,6 +27,7 @@ builder.Services.AddAuthentication(o =>
 });
 
 builder.Services.AddSingleton<UserAccountService>();
+builder.Services.Configure<DatabaseOptions>(o => builder.Configuration.GetSection("Database").Bind(o));
 
 var app = builder.Build();
 

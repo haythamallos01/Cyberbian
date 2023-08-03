@@ -20,7 +20,6 @@ builder.Services.AddBlazoredSessionStorage();
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 builder.Services.Configure<ChatOptions>(o => builder.Configuration.GetSection("OpenAI").Bind(o));
 builder.Services.Configure<DIDOptions>(o => builder.Configuration.GetSection("DID").Bind(o));
-builder.Services.Configure<AzureOptions>(o => builder.Configuration.GetSection("Azure").Bind(o));
 builder.Services.Configure<DatabaseOptions>(o => builder.Configuration.GetSection("Database").Bind(o));
 builder.Services.AddScoped<OpenAIService>();
 builder.Services.AddScoped<DIDService>();

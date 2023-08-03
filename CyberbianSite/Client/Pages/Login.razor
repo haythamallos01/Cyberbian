@@ -9,31 +9,35 @@
 
 <div class="rs-features bg1 pt-126 md-pt-71 md-pb-75">
     <div class="container relative">
-        <div class="row">
-            <div class="col-lg-4 offset-lg-4 pt-4 pb-4 border">
-                <div class="mb-3 text-center">
-                    <h4>Please sign-in with your account</h4>
-                </div>
-                <div class="mb-3">
-                    <label>User Name</label>
-                    <input @bind="loginRequest.UserName" class="form-control" placeholder="User Name" />
-                </div>
-                <div class="mb-3">
-                    <label>Password</label>
-                    <input @bind="loginRequest.Password" type="password" class="form-control" placeholder="Password" />
-                </div>
-                <div class="mb-3 d-grid gap-2">
-                    <button @onclick="Authenticate" class="btn btn-primary">Login</button>
-                </div>
+        <EditForm Model="loginRequest" OnValidSubmit="Authenticate">
+            <DataAnnotationsValidator />
+            <div class="mb-3 text-center">
+                <h4>Please sign-in with your account</h4>
             </div>
-        </div>
+
+            <div class="mb-3">
+                <label for="username">Email</label>
+                <InputText id="username" @bind-Value="loginRequest.UserName" class="form-control" />
+                <ValidationMessage For="@(() => loginRequest.UserName)" />
+            </div>
+            <div class="mb-3">
+                <label for="password">Password</label>
+                <InputText id="password" @bind-Value="loginRequest.Password" class="form-control" type="password" />
+                <ValidationMessage For="@(() => loginRequest.Password)" />
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+            <div class="mb-3">
+                <label>@errorMsg</label>
+            </div>
+        </EditForm>
+
     </div>
 </div>
 
 
 @code {
     private LoginRequest loginRequest = new LoginRequest();
-
+    private string? errorMsg = string.Empty;
     private async Task Authenticate()
     {
         var loginResponse = await httpClient.PostAsJsonAsync<LoginRequest>("/api/Account/Login", loginRequest);
@@ -47,8 +51,10 @@
         }
         else if (loginResponse.StatusCode == HttpStatusCode.Unauthorized)
         {
-            await js.InvokeVoidAsync("alert", "Invalid User Name or Password");
-            return;
+            errorMsg = "Invalid User Name or Password";
+            StateHasChanged();
+            //await js.InvokeVoidAsync("alert", "Invalid User Name or Password");
+            //return;
         }
     }
 }

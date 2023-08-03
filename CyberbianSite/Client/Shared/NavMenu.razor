@@ -1,9 +1,9 @@
-﻿@using CyberbianSite.Client.Authentication
+﻿@inherits LayoutComponentBase
+@using CyberbianSite.Client.Authentication
 @inject AuthenticationStateProvider authStateProvider
 @inject NavigationManager navManager
 
 <!--Full width header Start-->
-<div class="top-row px-4">
 <div id="rs-head" class="full-width-header">
     <!--Header Start-->
     <header id="rs-header" class="rs-header transparent-header">
@@ -11,6 +11,11 @@
         <div class="menu-area menu-sticky">
             <div class="container">
                 <div class="row">
+                    <div class="col-lg-2">
+                        <div class="logo-area">
+                            <a class="logo" href="/">Cyberbian</a>
+                        </div>
+                    </div>
                     <div class="col-lg-10 text-right">
                         <div class="rs-menu-area">
                             <div class="main-menu">
@@ -23,10 +28,17 @@
                                     <ul class="nav-menu">
                                         <!-- Home -->
                                         <li class="current-menu-item current_page_item"> <a href="/">Home</a></li>
-                                        @*                                        <li class="current-menu-item current_page_item"> <a href="FamousBot">Play "Guess the Famous Bot"</a></li>
-                                        <li class="current-menu-item current_page_item"> <a href="Veteran">Veteran Assistant</a></li>
-                                        <li class="current-menu-item current_page_item"> <a href="Register">Register</a></li>
-*@                                        <!-- End Home -->
+                                        <!-- End Home -->
+                                        <AuthorizeView>
+                                            <Authorized>
+                                                <li class="current-menu-item current_page_item"><a href="/">Hello, @context.User.Identity.Name!</a></li>
+                                                <li class="current-menu-item current_page_item"><a @onclick="Logout" href="javascript:void(0)">Logout</a></li>
+                                            </Authorized>
+                                            <NotAuthorized>
+                                                <li class="current-menu-item current_page_item"><a href="/login">Login</a></li>
+                                                <li class="current-menu-item current_page_item"><a href="/register">Hello, Guest!</a></li>
+                                            </NotAuthorized>
+                                        </AuthorizeView>
 
                                     </ul> <!-- //.nav-menu -->
                                 </nav>
@@ -42,4 +54,11 @@
     <!--Header End-->
 </div>
 <!--Full width header End-->
-</div>
+@code {
+    private async Task Logout()
+    {
+        var customAuthStateProvider = (CustomAuthenticationStateProvider)authStateProvider;
+        await customAuthStateProvider.UpdateAuthenticationState(null);
+        navManager.NavigateTo("/", true);
+    }
+}
