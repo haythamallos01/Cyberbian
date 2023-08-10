@@ -54,6 +54,7 @@ namespace CyberbianSite.Server.Authentication
                 MemberRoleId = 2
             };
             MemberORM memberORM = new MemberORM(_optionsDatabase.Value.ConnectionString);
+            member.DefaultHandle = StringHelper.RandomString(9);
             member = memberORM.Create(member);
             return member;
         }

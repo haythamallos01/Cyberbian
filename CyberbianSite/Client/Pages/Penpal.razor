@@ -1,0 +1,36 @@
+﻿@page "/Penpal"
+@using CyberbianSite.Client.Authentication
+@inject AuthenticationStateProvider authStateProvider
+@inject NavigationManager navManager
+
+<h3>Penpal</h3>
+
+
+
+<div class="rs-features bg1 pt-126 md-pt-71 md-pb-75">
+    <div class="container relative">
+        <div class="container d-flex flex-column vh-100">
+            <img src="assets/images/bot/penpal-bert.jpg" Style="width: 15rem;" />
+        </div>
+        <div class="text-center">
+            <h3>Hi, I'm Bert - Your Personal Penpal</h3>
+            <p>You can email me and I will respond like a kind friend.  Try me!</p>
+        </div>
+        <hr />
+
+        <AuthorizeView>
+            <Authorized>
+                <div class="text-center">
+                    <p>My email address is:  @botEmailAddress(context.User.Identity.Name)</p>
+                </div>
+            </Authorized>
+            <NotAuthorized>
+                <div class="text-center">
+                    <p>To meet Bert, you first have to <a href="/login">Login</a> or <a href="/register">Register</a></p>
+                </div>
+            </NotAuthorized>
+        </AuthorizeView>
+
+    </div>
+</div>
+

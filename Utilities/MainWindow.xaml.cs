@@ -3,6 +3,10 @@ using System.IO;
 using System.Windows;
 using System.Windows.Media.TextFormatting;
 
+using Azure;
+using Azure.Communication.Email;
+using Cyberbian.Common.Lib;
+
 namespace Utilities
 {
     /// <summary>
@@ -63,6 +67,64 @@ namespace Utilities
         private void talkingAIButton_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private async void sendEmailAzureButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                // This code demonstrates how to fetch your connection string
+                // from an environment variable.
+                string connectionString = "endpoint=https://cyberbian-communication-services-main.unitedstates.communication.azure.com/;accesskey=nn4HLpUjL6PY55A5l6cMIzbDBHPc/6hdEA5MjDjJjMCNsZ8DuoumtMgu+lygv6bw/eITwWlfB3nm9+IrAev/KA==";
+                EmailClient emailClient = new EmailClient(connectionString);
+
+                //Replace with your domain and modify the content, recipient details as required
+
+                var subject = "Welcome to Azure Communication Service Email APIs.";
+                var htmlContent = "<html><body><h1>Quick send email test</h1><br/><h4>This email message is sent from Azure Communication Service Email.</h4><p>This mail was sent using .NET SDK!!</p></body></html>";
+                var senderEmail = "donotreply@9a452696-680b-4fd4-989a-32ec7cf7605e.azurecomm.net";
+                var recipient = "haytham.allos@gmail.com";
+
+                try
+                {
+                    Console.WriteLine("Sending email...");
+                    EmailSendOperation emailSendOperation = await emailClient.SendAsync(
+                        Azure.WaitUntil.Completed,
+                        senderEmail,
+                        recipient,
+                        subject,
+                        htmlContent);
+                    EmailSendResult statusMonitor = emailSendOperation.Value;
+
+                    Console.WriteLine($"Email Sent. Status = {emailSendOperation.Value.Status}");
+
+                    /// Get the OperationId so that it can be used for tracking the message for troubleshooting
+                    string operationId = emailSendOperation.Id;
+                    Console.WriteLine($"Email operation id = {operationId}");
+                }
+                catch (RequestFailedException ex)
+                {
+                    /// OperationID is contained in the exception message and can be used for troubleshooting purposes
+                    Console.WriteLine($"Email send operation failed with error code: {ex.ErrorCode}, message: {ex.Message}");
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void stringHelperButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                string randomText = StringHelper.RandomString(9);
+                MessageBox.Show(randomText);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

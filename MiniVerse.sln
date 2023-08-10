@@ -67,9 +67,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Template", "Template", "{2D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Schema", "Schema\Schema.csproj", "{4005D7F3-B8B7-430B-B380-8868F4FAC390}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cyberbian.Data.ORM.Lib", "Cyberbian.Data.ORM.Lib\Cyberbian.Data.ORM.Lib.csproj", "{DE5533B0-2344-42A5-B09B-EF84175420EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cyberbian.Data.ORM.Lib", "Cyberbian.Data.ORM.Lib\Cyberbian.Data.ORM.Lib.csproj", "{DE5533B0-2344-42A5-B09B-EF84175420EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cyberbian.Common.Lib", "Cyberbian.Common.Lib\Cyberbian.Common.Lib.csproj", "{F02CFD1A-DDA1-4E75-A962-0F05A59C5872}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cyberbian.Common.Lib", "Cyberbian.Common.Lib\Cyberbian.Common.Lib.csproj", "{F02CFD1A-DDA1-4E75-A962-0F05A59C5872}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cyberbian.Web.Webhook.Email", "Cyberbian.Web.Webhook.Email\Cyberbian.Web.Webhook.Email.csproj", "{E2546D74-F074-41A6-B737-CE40EB3D4716}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -137,6 +139,10 @@ Global
 		{F02CFD1A-DDA1-4E75-A962-0F05A59C5872}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F02CFD1A-DDA1-4E75-A962-0F05A59C5872}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F02CFD1A-DDA1-4E75-A962-0F05A59C5872}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2546D74-F074-41A6-B737-CE40EB3D4716}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2546D74-F074-41A6-B737-CE40EB3D4716}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2546D74-F074-41A6-B737-CE40EB3D4716}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2546D74-F074-41A6-B737-CE40EB3D4716}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -159,6 +165,7 @@ Global
 		{4005D7F3-B8B7-430B-B380-8868F4FAC390} = {90189B6D-E92F-44AC-91BC-046844819A07}
 		{DE5533B0-2344-42A5-B09B-EF84175420EA} = {90189B6D-E92F-44AC-91BC-046844819A07}
 		{F02CFD1A-DDA1-4E75-A962-0F05A59C5872} = {90189B6D-E92F-44AC-91BC-046844819A07}
+		{E2546D74-F074-41A6-B737-CE40EB3D4716} = {90189B6D-E92F-44AC-91BC-046844819A07}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {152BF270-137A-4384-9C51-A10D7F2AC823}

@@ -11,7 +11,7 @@ BEGIN
 END
 GO
 
-CREATE TABLE [dbo].[Version](
+CREATE TABLE [Version](
 	[VersionId] [numeric](10, 0) NOT NULL,
 	[DateCreated] [datetime] NULL,
 	[MajorNum] [int] NULL,
@@ -37,11 +37,11 @@ BEGIN
 		DROP  Table Syslog
 END
 GO
-CREATE TABLE [dbo].[Syslog](
+CREATE TABLE [Syslog](
 	[SyslogId] [numeric](10, 0) IDENTITY(1,1) NOT NULL,
 	[DateCreated] [datetime] NULL,
-	[DateModified] [datetime] NULL,
 	[MsgSource] [nvarchar](255) NULL,
+	[Payload] [text] NULL,
 	[MsgText] [text] NULL
 )
 IF OBJECT_ID('Syslog') IS NOT NULL
@@ -62,7 +62,7 @@ BEGIN
 		DROP  Table MemberRole
 END
 GO
-CREATE TABLE [dbo].[MemberRole](
+CREATE TABLE [MemberRole](
 	[MemberRoleId] [numeric](10, 0) NOT NULL,
 	[DateCreated] [datetime] NULL,
 	[Code] [nvarchar](255) NULL
@@ -85,7 +85,7 @@ BEGIN
 		DROP  Table Member
 END
 GO
-CREATE TABLE [dbo].[Member](
+CREATE TABLE [Member](
 	[MemberId] [numeric](10, 0) IDENTITY(1,1) NOT NULL,
 	[MemberRoleId] [numeric](10, 0) NULL,
 	[DateCreated] [datetime] NULL,
@@ -104,6 +104,43 @@ IF OBJECT_ID('Member') IS NOT NULL
     PRINT '<<< CREATED TABLE Member >>>'
 ELSE
     PRINT '<<< FAILED CREATING TABLE Member >>>'
+GO
+
+/*******************************************************************************
+**		Change History
+*******************************************************************************
+**		Date:		Author:		Description:
+**		07/28/23		HA		Created
+*******************************************************************************/
+IF EXISTS (SELECT * FROM sysobjects WHERE type = 'U' AND name = 'IncomingEmail')
+BEGIN
+		PRINT 'Dropping Table IncomingEmail'
+		DROP  Table IncomingEmail
+END
+GO
+CREATE TABLE [IncomingEmail](
+	[IncomingEmailId] [numeric](10, 0) IDENTITY(1,1) NOT NULL,
+	[DateCreated] [datetime] NULL,
+	[DateModified] [datetime] NULL,
+	[DateBeginProcessing] [datetime] NULL,
+	[DateEndProcessing] [datetime] NULL,
+	[ProcessingDurationInMS] [int] NULL,
+	[MsgSource] [nvarchar](255) NULL,
+	[IsProcessed] [bit] NULL,
+	[IsTest] [bit] NULL,
+	[IsError] [bit] NULL,
+	[ErrorStr] [text] NULL,
+	[RawData] [text] NULL
+)
+IF OBJECT_ID('IncomingEmail') IS NOT NULL
+    PRINT '<<< CREATED TABLE IncomingEmail >>>'
+ELSE
+    PRINT '<<< FAILED CREATING TABLE IncomingEmail >>>'
+GO
+
+INSERT [dbo].[MemberRole] ([MemberRoleId], [DateCreated], [Code]) VALUES (1, GETDATE(), 'MEMBER_ROLE_ADMIN')
+GO
+INSERT [dbo].[MemberRole] ([MemberRoleId], [DateCreated], [Code]) VALUES (2, GETDATE(), 'MEMBER_ROLE_USER')
 GO
 
 INSERT INTO [Version] (VersionId, DateCreated, MajorNum, MinorNum,Notes) VALUES (1, GETDATE(), 1, 0,'Initial 1.0');

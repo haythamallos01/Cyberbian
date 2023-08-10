@@ -8,6 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Azure.Communication.Email" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Cyberbian.Common.Lib\Cyberbian.Common.Lib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="Data\MrBeastWikiReferences.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

@@ -22,6 +22,7 @@ builder.Services.Configure<ChatOptions>(o => builder.Configuration.GetSection("O
 builder.Services.Configure<DIDOptions>(o => builder.Configuration.GetSection("DID").Bind(o));
 builder.Services.Configure<DatabaseOptions>(o => builder.Configuration.GetSection("Database").Bind(o));
 builder.Services.AddScoped<OpenAIService>();
+builder.Services.AddScoped<DbService>();
 builder.Services.AddScoped<DIDService>();
 builder.Services.AddScoped<DialogService>();
 builder.Services.AddScoped<NotificationService>();

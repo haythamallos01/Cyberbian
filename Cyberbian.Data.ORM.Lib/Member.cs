@@ -13,15 +13,17 @@ namespace Cyberbian.Data.ORM.Lib
         public long MemberRoleId { get; set; }
         public DateTime DateCreated { get; set; }
         public DateTime DateModified { get; set; }
-        public string FirstName { get; set; }
-        public string MiddleName { get; set; }
-        public string LastName { get; set; }
+        public string? FirstName { get; set; }
+        public string? MiddleName { get; set; }
+        public string? LastName { get; set; }
         public string Username { get; set; }
-        public string PasswordEncrypted { get; set; }
-        public string PictureUrl { get; set; }
+        public string? PasswordEncrypted { get; set; }
+        public string? PictureUrl { get; set; }
         public byte[] PictureData { get; set; }
         public bool IsDisabled { get; set; }
         public DateTime LastLoginDate { get; set; }
+        public string? DefaultHandle { get; set; }
+
     }
 
     public class MemberORM : ORMBase
@@ -40,6 +42,7 @@ namespace Cyberbian.Data.ORM.Lib
           ,[PictureUrl]
           ,[IsDisabled]
           ,[LastLoginDate]
+          ,[DefaultHandle]
           FROM [Member]";
 
         public static readonly string INSERT_SQL =
@@ -53,6 +56,7 @@ namespace Cyberbian.Data.ORM.Lib
            ,[PasswordEncrypted]
            ,[PictureUrl]
            ,[IsDisabled]
+           ,[DefaultHandle]
            )
      VALUES
            (@MemberRoleId
@@ -64,6 +68,7 @@ namespace Cyberbian.Data.ORM.Lib
            ,@PasswordEncrypted
            ,@PictureUrl
            ,@IsDisabled
+           ,@DefaultHandle
             ) SELECT CAST(SCOPE_IDENTITY() as numeric(10))";
 
         public MemberORM(string connString)

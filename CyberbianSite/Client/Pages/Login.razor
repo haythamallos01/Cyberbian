@@ -47,7 +47,8 @@
             var userSession = await loginResponse.Content.ReadFromJsonAsync<UserSession>();
             var customAuthStateProvider = (CustomAuthenticationStateProvider)authStateProvider;
             await customAuthStateProvider.UpdateAuthenticationState(userSession);
-            navManager.NavigateTo("/dashboard", true);
+            //navManager.NavigateTo("/dashboard", true);
+            navManager.NavigateTo("/", true);
         }
         else if (loginResponse.StatusCode == HttpStatusCode.Unauthorized)
         {
