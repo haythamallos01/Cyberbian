@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Cyberbian.Common.Lib\Cyberbian.Common.Lib.csproj" />
+    <ProjectReference Include="..\Cyberbian.Common.Lib\Cyberbian.Common.csproj" />
   </ItemGroup>
 
   <ItemGroup>

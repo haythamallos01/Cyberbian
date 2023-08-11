@@ -1,30 +1,9 @@
-﻿using Dapper;
-using System;
-using System.Data;
-using System.Data.Common;
-using System.Data.SqlClient;
-using System.Linq;
+﻿using CyberbianSite.Shared;
+using Dapper;
+using Microsoft.Data.SqlClient;
 
-namespace Cyberbian.Data.ORM.Lib
+namespace Cyberbian.Data.ORM
 {
-    public class Member
-    {
-        public long MemberId { get; set; }
-        public long MemberRoleId { get; set; }
-        public DateTime DateCreated { get; set; }
-        public DateTime DateModified { get; set; }
-        public string? FirstName { get; set; }
-        public string? MiddleName { get; set; }
-        public string? LastName { get; set; }
-        public string Username { get; set; }
-        public string? PasswordEncrypted { get; set; }
-        public string? PictureUrl { get; set; }
-        public byte[] PictureData { get; set; }
-        public bool IsDisabled { get; set; }
-        public DateTime LastLoginDate { get; set; }
-        public string? DefaultHandle { get; set; }
-
-    }
 
     public class MemberORM : ORMBase
     {
@@ -105,6 +84,17 @@ namespace Cyberbian.Data.ORM.Lib
             using (var connection = new SqlConnection(_connectionString))
             {
                 member = connection.Query<Member>(sql, new { Username = username }).FirstOrDefault();
+            }
+            return member;
+        }
+
+        public Member GetByHandleId(string handleId)
+        {
+            Member? member = null;
+            var sql = SELECT_SQL + " WHERE DefaultHandle=@handleId";
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                member = connection.Query<Member>(sql, new { handleId = handleId }).FirstOrDefault();
             }
             return member;
         }

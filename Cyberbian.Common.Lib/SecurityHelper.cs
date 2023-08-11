@@ -3,7 +3,7 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Cyberbian.Common.Lib
+namespace Cyberbian.Common
 {
     public class SecurityHelper
     {

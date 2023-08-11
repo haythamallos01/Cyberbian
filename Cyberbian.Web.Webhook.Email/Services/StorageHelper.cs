@@ -1,5 +1,5 @@
-﻿using Cyberbian.Data.ORM.Lib;
-using Cyberbian.Web.Webhook.Email.Config;
+﻿using Cyberbian.Data.ORM;
+using CyberbianSite.Shared;
 using Newtonsoft.Json;
 using System.Dynamic;
 
@@ -17,10 +17,12 @@ namespace Cyberbian.Web.Webhook.Email.Services
         {
             try
             {
-                IncomingEmail incomingEmail = new IncomingEmail();
-                incomingEmail.RawData = data;
-                incomingEmail.IsTest = isTest;
-                incomingEmail.MsgSource = msgSource;
+                IncomingEmail incomingEmail = new()
+                {
+                    RawData = data,
+                    IsTest = isTest,
+                    MsgSource = msgSource
+                };
 
                 IncomingEmailORM incomingEmailORM = new IncomingEmailORM(_connectionString);
                 incomingEmail = incomingEmailORM.Create(incomingEmail);

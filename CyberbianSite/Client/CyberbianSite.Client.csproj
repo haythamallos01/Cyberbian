@@ -21,7 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Cyberbian.Data.ORM.Lib\Cyberbian.Data.ORM.Lib.csproj" />
     <ProjectReference Include="..\Shared\CyberbianSite.Shared.csproj" />
   </ItemGroup>
 

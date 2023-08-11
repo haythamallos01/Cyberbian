@@ -5,7 +5,7 @@ using System.Windows.Media.TextFormatting;
 
 using Azure;
 using Azure.Communication.Email;
-using Cyberbian.Common.Lib;
+using Cyberbian.Common;
 
 namespace Utilities
 {

@@ -1,0 +1,99 @@
+{
+  "FromName": "Haytham Allos",
+  "MessageStream": "inbound",
+  "From": "haytham.allos@gmail.com",
+  "FromFull": {
+    "Email": "haytham.allos@gmail.com",
+    "Name": "Haytham Allos",
+    "MailboxHash": ""
+  },
+  "To": "bert.qas5as0so@inbound.cyberbian.ai",
+  "ToFull": [
+    {
+      "Email": "bert.qas5as0so@inbound.cyberbian.ai",
+      "Name": "",
+      "MailboxHash": ""
+    }
+  ],
+  "Cc": "",
+  "CcFull": [],
+  "Bcc": "",
+  "BccFull": [],
+  "OriginalRecipient": "bert.qas5as0so@inbound.cyberbian.ai",
+  "Subject": "Going Through a Hard Time - Cheer Me Up",
+  "MessageID": "a5d8c17d-aa84-4683-8ce6-bce231c14f87",
+  "ReplyTo": "",
+  "MailboxHash": "",
+  "Date": "Thu, 10 Aug 2023 13:47:56 -0700",
+  "TextBody": "Hi Bert,\nI'm going through a hard time right now.  Can you cheer me up?  Thanks,\nbuddy.\n\nCheers,\n-Haytham\n",
+  "HtmlBody": "<div dir=\"ltr\">Hi Bert,<div>I&#39;m going through a hard time right now.\u00a0 Can you cheer me up?\u00a0 Thanks, buddy.<\/div><div><br><\/div><div>Cheers,<\/div><div>-Haytham<\/div><\/div>\n",
+  "StrippedTextReply": "",
+  "Tag": "",
+  "Headers": [
+    {
+      "Name": "Return-Path",
+      "Value": "<haytham.allos@gmail.com>"
+    },
+    {
+      "Name": "Received",
+      "Value": "by p-pm-inboundg01a-aws-useast1a.inbound.postmarkapp.com (Postfix, from userid 996)\tid 7B887405030; Thu, 10 Aug 2023 20:48:11 +0000 (UTC)"
+    },
+    {
+      "Name": "X-Spam-Checker-Version",
+      "Value": "SpamAssassin 3.4.0 (2014-02-07) on\tp-pm-inboundg01a-aws-useast1a"
+    },
+    {
+      "Name": "X-Spam-Status",
+      "Value": "No"
+    },
+    {
+      "Name": "X-Spam-Score",
+      "Value": "-5.1"
+    },
+    {
+      "Name": "X-Spam-Tests",
+      "Value": "DKIM_SIGNED,DKIM_VALID,DKIM_VALID_AU,FREEMAIL_FROM,HTML_MESSAGE,\tRCVD_IN_DNSWL_HI,RCVD_IN_MSPIKE_H2,RCVD_IN_ZEN_BLOCKED_OPENDNS,SPF_HELO_NONE,\tSPF_PASS"
+    },
+    {
+      "Name": "Received-SPF",
+      "Value": "pass (gmail.com ... _spf.google.com: Sender is authorized to use 'haytham.allos@gmail.com' in 'mfrom' identity (mechanism 'include:_netblocks.google.com' matched)) receiver=p-pm-inboundg01a-aws-useast1a; identity=mailfrom; envelope-from=\"haytham.allos@gmail.com\"; helo=mail-oi1-f178.google.com; client-ip=209.85.167.178"
+    },
+    {
+      "Name": "Received",
+      "Value": "from mail-oi1-f178.google.com (mail-oi1-f178.google.com [209.85.167.178])\t(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128\/128 bits))\t(No client certificate requested)\tby p-pm-inboundg01a-aws-useast1a.inbound.postmarkapp.com (Postfix) with ESMTPS id 1814040504F\tfor <bert.qas5as0so@inbound.cyberbian.ai>; Thu, 10 Aug 2023 20:48:11 +0000 (UTC)"
+    },
+    {
+      "Name": "Received",
+      "Value": "by mail-oi1-f178.google.com with SMTP id 5614622812f47-3a3efebcc24so1117699b6e.1        for <bert.qas5as0so@inbound.cyberbian.ai>; Thu, 10 Aug 2023 13:48:11 -0700 (PDT)"
+    },
+    {
+      "Name": "DKIM-Signature",
+      "Value": "v=1; a=rsa-sha256; c=relaxed\/relaxed;        d=gmail.com; s=20221208; t=1691700490; x=1692305290;        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject         :date:message-id:reply-to;        bh=mUckM1SvA0gDeBLcSPWfEGs8n+Q2+RjbBpPdbI6pzJ8=;        b=OkkfXKdU8B5rMfKF1yrvRMNnT5sW11bUmZpf8CW9ga+YXwUkar7PS6\/NnG\/cIFDO9+         5SIo2Vx2qnt0aCSqLuYM4cy9Cl5DqD+mmErXQNQsqHTMr+GFwVnc7oYe3TPlHc4VD\/Ql         FuIzdXCoU\/8Jng15kHv0NLCus9HCWkbrTca4lQ0d9mHTnEMBtcJKSD6A8ZRG5dS1mHlU         3aTmf79xQb\/DVaIvHGgScE0pZNzJNAveY\/Ty3BPk7Squqy9YwhYZmfp7dhL7JKLakQkq         Y056Knc9YlDZJosNudWOJ2IfYEV3Lmt82rw3X1f7qW\/m59ZjHsSRtplRtmeCZGSsZckF         x21w=="
+    },
+    {
+      "Name": "X-Google-DKIM-Signature",
+      "Value": "v=1; a=rsa-sha256; c=relaxed\/relaxed;        d=1e100.net; s=20221208; t=1691700490; x=1692305290;        h=to:subject:message-id:date:from:mime-version:x-gm-message-state         :from:to:cc:subject:date:message-id:reply-to;        bh=mUckM1SvA0gDeBLcSPWfEGs8n+Q2+RjbBpPdbI6pzJ8=;        b=Su3GCJJfMRPgmYj9\/RGCijdvrbdShXIUO58XR96mfAuJE9FOCzdwzZJCWNrPPzlmP5         zscoGd0IqaMrvJBrSPiG7lMrYaUmiqT1yBphZvyiCYl5pOnS1q\/hK597TLVbxp9r1n3Z         r8NnbS5DSLlDqt7QmSPC\/Pegat9yCmYof3f8LVsGqG0Ff\/wCNVz3otIHIMvNNZ+gn3\/k         lIfcgO7ZjYY5+hURkAs3dV2GBosY1m4WOZuICWwK1ZZ+Nw76ZrMdKhRPw05lbOJL0\/bH         dii1f\/lBFjlgo9YacW9aNn+IxZyO0ffA5y5zGf+LHH35AtBHBf8A07q6Ss9s3s+yYjFA         gABg=="
+    },
+    {
+      "Name": "X-Gm-Message-State",
+      "Value": "AOJu0YwjXbl239Eod2RHt3Wd7TXryxh6jZAvCZIKnlg+cnSwok4UWzm5\t4kre0eL+Twfx0hKIpVvDEMBy7tdxziN\/iLaLAkZg8Rjoyb4="
+    },
+    {
+      "Name": "X-Google-Smtp-Source",
+      "Value": "AGHT+IFOFOl\/EeDg8pS2JGrq8K6XVuwvyb6KS51+rE7i0Djx\/jtuvzRLe0\/1hDjI6I6MbqPcczetZ1hv6bWpbP6tgr4="
+    },
+    {
+      "Name": "X-Received",
+      "Value": "by 2002:aca:2818:0:b0:3a7:b5ea:f5e8 with SMTP id 24-20020aca2818000000b003a7b5eaf5e8mr3574682oix.27.1691700490263; Thu, 10 Aug 2023 13:48:10 -0700 (PDT)"
+    },
+    {
+      "Name": "MIME-Version",
+      "Value": "1.0"
+    },
+    {
+      "Name": "Message-ID",
+      "Value": "<CALxf-Vgh0PdetKtP42cOEBKS82NgCBDU6u7=JpFJuWvU7sSm5A@mail.gmail.com>"
+    }
+  ],
+  "Attachments": []
+}

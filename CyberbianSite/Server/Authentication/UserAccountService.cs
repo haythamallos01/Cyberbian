@@ -1,7 +1,7 @@
-﻿using Cyberbian.Data.ORM.Lib;
-using Cyberbian.Common.Lib;
+﻿using Cyberbian.Common;
 using Microsoft.Extensions.Options;
 using CyberbianSite.Client.Config;
+using Cyberbian.Data.ORM;
 
 namespace CyberbianSite.Server.Authentication
 {

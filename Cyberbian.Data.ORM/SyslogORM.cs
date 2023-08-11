@@ -1,20 +1,8 @@
-﻿using Dapper;
-using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Text;
-
-namespace Cyberbian.Data.ORM.Lib
+﻿using CyberbianSite.Shared;
+using Dapper;
+using Microsoft.Data.SqlClient;
+namespace Cyberbian.Data.ORM
 {
-    public class Syslog
-    {
-        public long SyslogId { get; set; }
-        public DateTime DateCreated { get; set; }
-        public string MsgSource { get; set; }
-        public string Payload { get; set; }
-        public string MsgText { get; set; }
-    }
-
     public class SyslogORM : ORMBase
     {
         public static readonly string TABLE_NAME = "Syslog";

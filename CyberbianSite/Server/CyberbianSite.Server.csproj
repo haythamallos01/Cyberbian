@@ -13,8 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Cyberbian.Common.Lib\Cyberbian.Common.Lib.csproj" />
-    <ProjectReference Include="..\..\Cyberbian.Data.ORM.Lib\Cyberbian.Data.ORM.Lib.csproj" />
+    <ProjectReference Include="..\..\Cyberbian.Common.Lib\Cyberbian.Common.csproj" />
+    <ProjectReference Include="..\..\Cyberbian.Data.ORM\Cyberbian.Data.ORM.csproj" />
     <ProjectReference Include="..\Client\CyberbianSite.Client.csproj" />
     <ProjectReference Include="..\Shared\CyberbianSite.Shared.csproj" />
   </ItemGroup>

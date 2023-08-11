@@ -2,6 +2,7 @@
 @using CyberbianSite.Client.Authentication
 @inject AuthenticationStateProvider authStateProvider
 @inject NavigationManager navManager
+@inject HttpClient httpClient
 
 <h3>Penpal</h3>
 
@@ -21,7 +22,8 @@
         <AuthorizeView>
             <Authorized>
                 <div class="text-center">
-                    <p>My email address is:  @botEmailAddress(context.User.Identity.Name)</p>
+                    <p><b>Here is my email address</b></p>
+                    <p><a href="mailto:@botEmailAddress">@botEmailAddress</a></p>
                 </div>
             </Authorized>
             <NotAuthorized>

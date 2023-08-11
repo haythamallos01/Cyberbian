@@ -1,24 +1,9 @@
-﻿using Dapper;
-using System;
-using System.Data.SqlClient;
+﻿using CyberbianSite.Shared;
+using Dapper;
+using Microsoft.Data.SqlClient;
 
-namespace Cyberbian.Data.ORM.Lib
+namespace Cyberbian.Data.ORM
 {
-    public class IncomingEmail
-    {
-        public long IncomingEmailId { get; set; }
-        public DateTime DateCreated { get; set; }
-        public DateTime DateModified { get; set; }
-        public DateTime DateBeginProcessing { get; set; }
-        public DateTime DateEndProcessing { get; set; }
-        public long ProcessingDurationInMS { get; set; }
-        public string? MsgSource { get; set; }
-        public bool IsProcessed { get; set; }
-        public bool IsTest { get; set; }
-        public bool IsError { get; set; }
-        public string? ErrorStr { get; set; }
-        public string? RawData { get; set; }
-    }
     public class IncomingEmailORM : ORMBase
     {
         public static readonly string TABLE_NAME = "IncomingEmail";
@@ -34,9 +19,6 @@ namespace Cyberbian.Data.ORM.Lib
               ,[IsError]
               ,[ErrorStr]
               ,[RawData]
-              ,[FromAddress]
-              ,[ToAddress]
-              ,[Body]
           FROM [IncomingEmail]";
         public static readonly string INSERT_SQL =
            @"INSERT INTO [IncomingEmail]
@@ -64,6 +46,17 @@ namespace Cyberbian.Data.ORM.Lib
                 incomingEmail.IncomingEmailId = connection.ExecuteScalar<long>(INSERT_SQL, incomingEmail);
             }
             return incomingEmail;
+        }
+
+        public List<IncomingEmail> GetUnprocessed()
+        {
+            List<IncomingEmail>? ret = null;
+            var sql = SELECT_SQL + " WHERE (IsProcessed=0 or IsProcessed is null) and (IsError = 0 or isError is null)";
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                ret = connection.Query<IncomingEmail>(sql).ToList();
+            }
+            return ret;
         }
     }
 }
