@@ -54,6 +54,33 @@ GO
 ALTER TABLE [Member] ADD [DefaultHandle] nvarchar(255) NULL;
 GO
 
+ALTER TABLE [IncomingEmail] ADD [IncomingTo] nvarchar(255) NULL;
+GO
+ALTER TABLE [IncomingEmail] ADD [OutgoingFrom] nvarchar(255) NULL;
+GO
+ALTER TABLE [IncomingEmail] ADD [OutgoingTo] nvarchar(255) NULL;
+GO
+ALTER TABLE [IncomingEmail] ADD [OutgoingReplyTo] nvarchar(255) NULL;
+GO
+ALTER TABLE [IncomingEmail] ADD [OutgoingSubject] text NULL;
+GO
+ALTER TABLE [IncomingEmail] ADD [OutgoingTextBody] text NULL;
+GO
+ALTER TABLE [IncomingEmail] ADD [OutgoingHtmlBody] text NULL;
+GO
+ALTER TABLE [IncomingEmail] ADD [OutgoingMessageStream] nvarchar(255) NULL;
+GO
+ALTER TABLE [IncomingEmail] ADD [HandleId] nvarchar(255) NULL;
+GO
+ALTER TABLE [IncomingEmail] ADD [IncomingFromName] nvarchar(255) NULL;
+GO
+ALTER TABLE [IncomingEmail] ADD [IncomingFrom] nvarchar(255) NULL;
+GO
+ALTER TABLE [IncomingEmail] ADD [IncomingSubject] text NULL;
+GO
+ALTER TABLE [IncomingEmail] ADD [MemberId] numeric (10, 0) NULL;
+GO
+
 INSERT [dbo].[AIType] ([AITypeId], [DateCreated], [Code]) VALUES (1, GETDATE(), 'PENPAL')
 GO
 

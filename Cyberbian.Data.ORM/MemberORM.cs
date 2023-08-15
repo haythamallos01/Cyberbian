@@ -98,5 +98,16 @@ namespace Cyberbian.Data.ORM
             }
             return member;
         }
+
+        public Member GetById(long memberId)
+        {
+            Member? member = null;
+            var sql = SELECT_SQL + " WHERE MemberId=@MemberId";
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                member = connection.Query<Member>(sql, new { MemberId = memberId }).FirstOrDefault();
+            }
+            return member;
+        }
     }
 }

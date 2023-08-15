@@ -1,6 +1,8 @@
 ﻿using CyberbianSite.Shared;
 using Dapper;
 using Microsoft.Data.SqlClient;
+using System.Data;
+using System.Data.Common;
 
 namespace Cyberbian.Data.ORM
 {
@@ -19,18 +21,78 @@ namespace Cyberbian.Data.ORM
               ,[IsError]
               ,[ErrorStr]
               ,[RawData]
+              ,[IncomingTo]
+              ,[OutgoingFrom]
+              ,[OutgoingTo]
+              ,[OutgoingReplyTo]
+              ,[OutgoingSubject]
+              ,[OutgoingTextBody]
+              ,[OutgoingHtmlBody]
+              ,[OutgoingMessageStream]
+              ,[HandleId]
+              ,[IncomingFromName]
+              ,[IncomingFrom]
+              ,[IncomingSubject]
+              ,[MemberId]
           FROM [IncomingEmail]";
+
         public static readonly string INSERT_SQL =
            @"INSERT INTO [IncomingEmail]
            (DateCreated
            ,IsTest
            ,MsgSource
-           ,RawData)
+           ,RawData
+           ,IncomingTo
+           ,OutgoingFrom
+           ,OutgoingTo
+           ,OutgoingReplyTo
+           ,OutgoingSubject
+           ,OutgoingTextBody
+           ,OutgoingHtmlBody
+           ,OutgoingMessageStream
+           ,HandleId
+           ,IncomingFromName
+           ,IncomingFrom
+           ,IncomingSubject
+           ,MemberId
+        )
      VALUES
            (@DateCreated
            ,@IsTest
            ,@MsgSource
-           ,@RawData) SELECT CAST(SCOPE_IDENTITY() as numeric(10))";
+           ,@RawData
+           ,@IncomingTo
+           ,@OutgoingFrom
+           ,@OutgoingTo
+           ,@OutgoingReplyTo
+           ,@OutgoingSubject
+           ,@OutgoingTextBody
+           ,@OutgoingHtmlBody
+           ,@OutgoingMessageStream
+           ,@HandleId
+           ,@IncomingFromName
+           ,@IncomingFrom
+           ,@IncomingSubject
+           ,@MemberId
+            ) 
+            SELECT CAST(SCOPE_IDENTITY() as numeric(10))";
+
+        public static readonly string UPDATE_OUTGOING_SQL =
+           @"
+            UPDATE [IncomingEmail] SET 
+            [DateModified]=@DateModified, 
+            [DateBeginProcessing]=@DateBeginProcessing, 
+            [DateEndProcessing]=@DateEndProcessing, 
+            [ProcessingDurationInMS]=@ProcessingDurationInMS, 
+            [IsProcessed]=@IsProcessed, 
+            [OutgoingFrom]=@OutgoingFrom, 
+            [OutgoingTo]=@OutgoingTo, 
+            [OutgoingReplyTo]=@OutgoingReplyTo, 
+            [OutgoingSubject]=@OutgoingSubject, 
+            [OutgoingTextBody]=@OutgoingTextBody, 
+            [OutgoingHtmlBody]=@OutgoingHtmlBody, 
+            [OutgoingMessageStream]=@OutgoingMessageStream 
+            ";
 
         public IncomingEmailORM(string connString)
         {
@@ -57,6 +119,27 @@ namespace Cyberbian.Data.ORM
                 ret = connection.Query<IncomingEmail>(sql).ToList();
             }
             return ret;
+        }
+
+        public List<IncomingEmail> GetSameSubjectListForMember(long memberId, string subjectText)
+        {
+            List<IncomingEmail>? ret = null;
+            var sql = SELECT_SQL + " WHERE (MemberId = @MemberId) and (IncomingSubject like CONCAT('%', @IncomingSubject, '%'))";
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                ret = connection.Query<IncomingEmail>(sql, new { MemberId = memberId, IncomingSubject = subjectText }).ToList();
+            }
+            return ret;
+        }
+
+        public void UpdateOutgoingData(IncomingEmail incomingEmail)
+        {
+            incomingEmail.DateModified = DateTime.UtcNow;
+            var sql = UPDATE_OUTGOING_SQL + " WHERE IncomingEmailId = @IncomingEmailId";
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                connection.ExecuteScalar<int>(sql, incomingEmail);
+            }
         }
     }
 }

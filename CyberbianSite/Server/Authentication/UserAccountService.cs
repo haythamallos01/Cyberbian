@@ -51,7 +51,9 @@ namespace CyberbianSite.Server.Authentication
             {
                 Username = userRegister.Email,
                 PasswordEncrypted = SecurityHelper.Encrypt(userRegister.Password),
-                MemberRoleId = 2
+                MemberRoleId = 2,
+                FirstName = userRegister.FirstName,
+                LastName = userRegister.LastName
             };
             MemberORM memberORM = new MemberORM(_optionsDatabase.Value.ConnectionString);
             member.DefaultHandle = StringHelper.RandomString(9);

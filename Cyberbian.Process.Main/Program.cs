@@ -18,7 +18,7 @@ namespace Cyberbian.Process.Main
             Console.WriteLine("Processing ... create empty stop file to quit gracefully");
             while (!_bStop)
             {
-                worker.Run();
+                await worker.Run();
                 await Task.Delay(_nCheckIntervalInMs);
                 if (File.Exists(stopFilepath))
                 {

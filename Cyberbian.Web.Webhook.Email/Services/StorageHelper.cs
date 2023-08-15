@@ -1,4 +1,5 @@
 ﻿using Cyberbian.Data.ORM;
+using Cyberbian.Process.Main.Lib.Models;
 using CyberbianSite.Shared;
 using Newtonsoft.Json;
 using System.Dynamic;
@@ -17,11 +18,26 @@ namespace Cyberbian.Web.Webhook.Email.Services
         {
             try
             {
+                MemberORM memberORM = new MemberORM(_connectionString);
+
+                IncomingEmailPayload incomingEmailPayload = JsonConvert.DeserializeObject<IncomingEmailPayload>(data);
+                // get the handle id from to address
+                int bInd = incomingEmailPayload.To.IndexOf('.');
+                int eInd = incomingEmailPayload.To.IndexOf('@');
+                string handleId = incomingEmailPayload.To.Substring(bInd + 1, eInd - bInd - 1);
+                Member member = memberORM.GetByHandleId(handleId);
+
                 IncomingEmail incomingEmail = new()
                 {
                     RawData = data,
                     IsTest = isTest,
-                    MsgSource = msgSource
+                    MsgSource = msgSource,
+                    HandleId = handleId,
+                    IncomingTo = incomingEmailPayload.To,
+                    IncomingFrom = incomingEmailPayload.From,
+                    IncomingFromName = incomingEmailPayload.FromName,
+                    IncomingSubject = incomingEmailPayload.Subject,
+                    MemberId = member.MemberId
                 };
 
                 IncomingEmailORM incomingEmailORM = new IncomingEmailORM(_connectionString);

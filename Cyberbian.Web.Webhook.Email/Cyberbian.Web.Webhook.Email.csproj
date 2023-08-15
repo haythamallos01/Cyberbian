@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Cyberbian.Data.ORM\Cyberbian.Data.ORM.csproj" />
+    <ProjectReference Include="..\Cyberbian.Process.Main.Lib\Cyberbian.Process.Main.Lib.csproj" />
   </ItemGroup>
 
 </Project>

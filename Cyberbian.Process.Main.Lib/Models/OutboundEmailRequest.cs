@@ -10,6 +10,7 @@ namespace Cyberbian.Process.Main.Lib.Models
     {
         public string From { get; set; }
         public string To { get; set; }
+        public string ReplyTo { get; set; }
         public string Subject { get; set; }
         public string TextBody { get; set; }
         public string HtmlBody { get; set; }
