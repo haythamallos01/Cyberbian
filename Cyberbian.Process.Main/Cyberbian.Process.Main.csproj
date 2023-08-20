@@ -10,7 +10,7 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Cyberbian.Process.Main.Lib\Cyberbian.Process.Main.Lib.csproj" />
+    <ProjectReference Include="..\Cyberbian.Common\Cyberbian.Common.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="appsettings.json">

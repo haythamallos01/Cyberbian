@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-
+﻿
 namespace Cyberbian.Common
 {
     public class StringHelper

@@ -1,4 +1,12 @@
-﻿@page "/FamousBot"
+﻿@page "/PalChat"
+@inject IJSRuntime js
+@attribute [Authorize(Roles = "Administrator, User")]
+@using CyberbianSite.Client.Authentication
+@using CyberbianSite.Shared
+@using System.Net.Http.Headers
+@inject HttpClient httpClient
+@inject NavigationManager navManager
+@inject AuthenticationStateProvider authStateProvider
 
 <div class="rs-features bg1 pt-126 md-pt-71 md-pb-75">
     <div class="container relative">
@@ -7,11 +15,17 @@
             @if (Messages.Count == 0)
             {
                 <div class="text-center">
-                    <h3>Welcome to the "Guess that famous bot" game by Cyberbian!</h3>
-                    <p>The bot is trained with the personality of a real famous person.  Can you guess who it is?</p>
+                    @if(_member != null)
+                    {
+                        <h3>Hi @_member.FirstName!  It's your pal Bert.  How is it going?</h3>
+                    }
+                    else
+                    {
+                        <h3>Howdy!  It's your pal Bert.  How is it going?</h3>
+                    }
+                    <p>Remember you can also email me anytime at <a href="mailto:@botEmailAddress">@botEmailAddress</a></p>
                 </div>
             }
-
 
             <div class="flex-grow-1">
                 @foreach (var message in Messages)
@@ -48,17 +62,13 @@
                     <button class="btn btn-primary" @onclick="ClearConversation">
                         <span class="bi bi-eraser">clear</span>
                     </button>
-                    <textarea rows="2" class="form-control" placeholder="Ask your question...hit return key"
-                        @bind-value="_userQuestion" @bind-value:event="oninput" @onkeypress="HandleKeyPress"
+                    <textarea rows="2" class="form-control" placeholder="Hey buddy, ask your question...hit return key"
+                    @bind-value="_userQuestion" @bind-value:event="oninput" @onkeypress="HandleKeyPress"
                               disabled="@_isSendingMessage">
                     </textarea>
 
-                </div>
-                <div class="text-center">
-                    <span>When you are ready to guess who it is, ask "Are you [the name]?"</span>
                 </div>
             </div>
         </div>
     </div>
 </div>
-

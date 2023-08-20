@@ -1,4 +1,6 @@
-﻿namespace Cyberbian.Process.Main.Lib.OpenAI
+﻿
+
+namespace Cyberbian.Common.OpenAI
 {
     public class OpenAIClient
     {

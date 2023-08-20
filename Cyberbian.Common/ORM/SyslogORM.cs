@@ -1,7 +1,8 @@
 ﻿using CyberbianSite.Shared;
 using Dapper;
 using Microsoft.Data.SqlClient;
-namespace Cyberbian.Data.ORM
+
+namespace Cyberbian.Common.ORM
 {
     public class SyslogORM : ORMBase
     {

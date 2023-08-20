@@ -1,6 +1,6 @@
 ﻿
 
-namespace Cyberbian.Data.ORM
+namespace Cyberbian.Common.ORM
 {
     public class ORMBase
     {

@@ -1,10 +1,5 @@
 using Cyberbian.Web.Webhook.Email.Config;
 using Cyberbian.Web.Webhook.Email.Services;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Options;
-using System.Configuration;
 using System.Web;
 
 namespace Cyberbian.Web.Webhook.Email

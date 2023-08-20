@@ -1,4 +1,4 @@
-﻿namespace Cyberbian.Process.Main.Lib.Models
+﻿namespace Cyberbian.Common.Models
 {
 
     public class IncomingEmailPayload

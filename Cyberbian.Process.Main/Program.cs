@@ -1,4 +1,6 @@
-﻿using Cyberbian.Process.Main.Lib;
+﻿using Cyberbian.Common.Logger;
+using Cyberbian.Common.Worker;
+using Microsoft.Extensions.Configuration;
 
 namespace Cyberbian.Process.Main
 {
@@ -11,30 +13,25 @@ namespace Cyberbian.Process.Main
         {
             Config config = new Config();
             _nCheckIntervalInMs = config.CheckIntervalInMs;
+            MyLogger logger = new MyLogger(config.ConnectionString);
 
-            Log("Starting main service");
-            MainWorker worker = new MainWorker();
+            logger.Log("Main Service", "Starting main service");
+            EmailWorker emailWorker = new EmailWorker(config.ConnectionString, config.SendEmailAPIToken, config.SendEmailUrl);
 
             Console.WriteLine("Processing ... create empty stop file to quit gracefully");
             while (!_bStop)
             {
-                await worker.Run();
+                await emailWorker.Run();
                 await Task.Delay(_nCheckIntervalInMs);
                 if (File.Exists(stopFilepath))
                 {
-                    Log("Gracefully stoppng main service");
+                    logger.Log("Main Service", "Gracefully stoppng main service");
                     Console.WriteLine("Detected stop file");
                     _bStop = true;
                     File.Delete(stopFilepath);
                     Console.WriteLine("Gracefully stopped main service");
                 }
             }
-        }
-
-        static void Log(string logMessage)
-        {
-            MainWorker mainWorker = new MainWorker();
-            mainWorker.Log("Main Service", logMessage);
         }
     }
 }

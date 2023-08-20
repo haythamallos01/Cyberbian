@@ -41,8 +41,10 @@ CREATE TABLE [AIMember](
 	[DateCreated] [datetime] NULL,
 	[DateModified] [datetime] NULL,
 	[Birthdate] [datetime] NULL,
-	[Fullname] [nvarchar](255) NULL,
 	[EmailAddress] [nvarchar](255) NULL,
+	[Seed] text NULL,
+	[GeneratedSeed] text NULL,
+	[BirthCertificateContent] text NULL,
 	[IsDisabled] [bit] NULL
 )
 IF OBJECT_ID('AIMember') IS NOT NULL
@@ -81,44 +83,9 @@ GO
 ALTER TABLE [IncomingEmail] ADD [MemberId] numeric (10, 0) NULL;
 GO
 
-INSERT [dbo].[AIType] ([AITypeId], [DateCreated], [Code]) VALUES (1, GETDATE(), 'PENPAL')
+INSERT [dbo].[AIType] ([AITypeId], [DateCreated], [Code]) VALUES (1, GETDATE(), 'PAL')
 GO
 
-/*******************************************************************************
-**		Change History
-*******************************************************************************
-**		Date:		Author:		Description:
-**		07/28/23		HA		Created
-*******************************************************************************/
-IF EXISTS (SELECT * FROM sysobjects WHERE type = 'U' AND name = 'OutgoingEmail')
-BEGIN
-		PRINT 'Dropping Table OutgoingEmail'
-		DROP  Table OutgoingEmail
-END
-GO
-CREATE TABLE [OutgoingEmail](
-	[OutgoingEmailId] [numeric](10, 0) IDENTITY(1,1) NOT NULL,
-	[IncomingEmailId] [numeric](10, 0) NOT NULL,
-	[MemberId] [numeric](10, 0) NOT NULL,
-	[DateCreated] [datetime] NULL,
-	[SourceRawData] [text] NULL,
-	[Subject] [text] NULL,
-	[Request] [text] NULL,
-	[Response] [text] NULL,
-	[ErrorCode] [int] default 0,
-	[StatusCode] [nvarchar](255) NULL,
-	[MessageID] [nvarchar](255) NULL,
-	[SubmittedAt] [nvarchar](255) NULL,
-	[FromSourceEmailAddress] [nvarchar](255) NULL,
-	[ToSendEmailAddress] [nvarchar](255) NULL,
-	[ToEmailReplyEmailAddress] [nvarchar](255) NULL,
-	[IsSuccess] [bit] NULL
-)
-IF OBJECT_ID('OutgoingEmail') IS NOT NULL
-    PRINT '<<< CREATED TABLE OutgoingEmail >>>'
-ELSE
-    PRINT '<<< FAILED CREATING TABLE OutgoingEmail >>>'
-GO
 
 INSERT INTO [Version] (VersionId, DateCreated, MajorNum, MinorNum,Notes) VALUES (2, GETDATE(), 1, 1,'Initial 1.1');
 GO

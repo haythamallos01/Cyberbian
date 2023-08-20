@@ -1,5 +1,5 @@
-﻿using Cyberbian.Data.ORM;
-using CyberbianSite.Client.Config;
+﻿using Cyberbian.Common.ORM;
+using CyberbianSite.Server.Config;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
@@ -29,6 +29,50 @@ namespace CyberbianSite.Server.Controllers
             else
             {
                 return member;
+            }
+        }
+
+        [HttpPost]
+        [Route("api/data/aimember")]
+        public ActionResult<AIMember> Create([FromBody] AIMember aimember)
+        {
+            AIMemberORM aiMemberORM = new AIMemberORM(_optionsDatabase.Value.ConnectionString);
+            aimember.PersonaPrompt = ConfigStrings.AIMemberDefaultPersonaPrompt;
+            aimember.UserQuestionPrompt = ConfigStrings.AIMemberDefaultUserQuestionPrompt;
+
+            aimember = aiMemberORM.Create(aimember);
+            if (aimember == null)
+            {
+                return Unauthorized();
+            }
+            else
+            {
+                return aimember;
+            }
+        }
+
+        [HttpGet("api/data/aimember")]
+        public ActionResult<AIMember> GetAIMember(long memberid, long aitypeid)
+        {
+            AIMemberORM aimemberORM = new AIMemberORM(_optionsDatabase.Value.ConnectionString);
+            AIMember aimember = aimemberORM.Get(memberid, aitypeid);
+            return aimember;
+        }
+
+        [HttpPost]
+        [Route("api/data/incomingchat")]
+        public ActionResult<IncomingChat> Create([FromBody] IncomingChat incomingchat)
+        {
+            IncomingChatORM incomingChatORM = new IncomingChatORM(_optionsDatabase.Value.ConnectionString);
+
+            incomingchat = incomingChatORM.Create(incomingchat);
+            if (incomingchat == null)
+            {
+                return Unauthorized();
+            }
+            else
+            {
+                return incomingchat;
             }
         }
     }

@@ -10,10 +10,6 @@ namespace CyberbianSite.Client.Pages
         private string _userQuestion = string.Empty;
         private readonly List<Message> _conversationHistory = new();
         private bool _isSendingMessage;
-        //private readonly string _chatBotKnowledgeScope = "" +
-        //    "Your name is FamousBot, You are the AI version of a someone famous." +
-        //    "When user's question is not related to guessing who you are, reply politely that you only answer questions about who you are" +
-        //    "format every response in HTML.";
 
         private readonly string _chatBotKnowledgeScope = @"Your name is FamousBot, You are the AI version of a someone famous. 
             You were born on May 7, 1998 with the real first name of James.  

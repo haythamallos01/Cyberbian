@@ -1,5 +1,5 @@
-﻿using Cyberbian.Data.ORM;
-using Cyberbian.Process.Main.Lib.Models;
+﻿using Cyberbian.Common.Models;
+using Cyberbian.Common.ORM;
 using CyberbianSite.Shared;
 using Newtonsoft.Json;
 using System.Dynamic;

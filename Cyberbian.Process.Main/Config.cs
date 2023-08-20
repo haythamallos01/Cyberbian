@@ -7,10 +7,14 @@ namespace Cyberbian.Process.Main
         private int _nClientID = 0;
         private int _nCheckIntervalInMs = 5000;
         private string _strConnectionString = null;
+        private string _strSendEmailAPIToken = null;
+        private string _strSendEmailUrl= null;
 
         private static readonly string KEY_CLIENT_ID = "ClientID";
         private static readonly string KEY_CHECK_INTERVAL_IN_MS = "CheckIntervalInMs";
         private static readonly string KEY_CONNECTION_STRING = "ConnectionString";
+        private static readonly string KEY_SEND_EMAIL_API_TOKEN = "SendEmailAPIToken";
+        private static readonly string KEY_SEND_EMAIL_URL = "SendEmailUrl";
 
         public string ConnectionString
         {
@@ -28,6 +32,18 @@ namespace Cyberbian.Process.Main
         {
             get { return _nCheckIntervalInMs; }
             set { _nCheckIntervalInMs = value; }
+        }
+
+        public string SendEmailAPIToken
+        {
+            get { return _strSendEmailAPIToken; }
+            set { _strSendEmailAPIToken = value; }
+        }
+
+        public string SendEmailUrl
+        {
+            get { return _strSendEmailUrl; }
+            set { _strSendEmailUrl = value; }
         }
 
         public Config()
@@ -54,6 +70,18 @@ namespace Cyberbian.Process.Main
                 _nClientID = Convert.ToInt32(configuration["AppSettings:" + KEY_CLIENT_ID]);
             }
             catch { _nClientID = 0; }
+
+            try
+            {
+                _strSendEmailAPIToken = configuration["AppSettings:" + KEY_SEND_EMAIL_API_TOKEN];
+            }
+            catch { }
+
+            try
+            {
+                _strSendEmailUrl = configuration["AppSettings:" + KEY_SEND_EMAIL_URL];
+            }
+            catch { }
         }
     }
 }

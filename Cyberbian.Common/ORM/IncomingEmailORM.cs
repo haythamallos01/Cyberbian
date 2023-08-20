@@ -4,7 +4,7 @@ using Microsoft.Data.SqlClient;
 using System.Data;
 using System.Data.Common;
 
-namespace Cyberbian.Data.ORM
+namespace Cyberbian.Common.ORM
 {
     public class IncomingEmailORM : ORMBase
     {

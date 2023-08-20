@@ -1,6 +1,7 @@
 global using CyberbianSite.Shared;
 using CyberbianSite.Client.Config;
 using CyberbianSite.Server.Authentication;
+using CyberbianSite.Server.Config;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;

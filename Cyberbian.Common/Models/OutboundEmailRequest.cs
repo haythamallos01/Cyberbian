@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
-namespace Cyberbian.Process.Main.Lib.Models
+namespace Cyberbian.Common.Models
 {
     public class OutboundEmailRequest
     {

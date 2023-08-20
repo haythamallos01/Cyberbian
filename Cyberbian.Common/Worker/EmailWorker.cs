@@ -1,17 +1,17 @@
-﻿using Cyberbian.Data.ORM;
+﻿using Cyberbian.Common.Models;
+using Cyberbian.Common.OpenAI;
+using Cyberbian.Common.ORM;
+using Cyberbian.Common.Logger;
 using CyberbianSite.Shared;
-using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
-using Cyberbian.Process.Main.Lib.Models;
-using Cyberbian.Process.Main.Lib.OpenAI;
-using System.Xml.Schema;
 using System.Net;
 using System.Text;
-using static System.Net.Mime.MediaTypeNames;
+using System.Linq;
+using System.Xml.Schema;
 
-namespace Cyberbian.Process.Main.Lib
+namespace Cyberbian.Common.Worker
 {
-    public class MainWorker
+    public class EmailWorker
     {
         public bool HasError { get; set; }
         public Exception Exc { get; set; }
@@ -20,37 +20,17 @@ namespace Cyberbian.Process.Main.Lib
         private string _sendEmailAPIToken { get; set; }
         private string _sendEmailUrl { get; set; }
 
-        public MainWorker()
+        private MyLogger _logger = null;
+
+        public EmailWorker(string connString, string sendEmailAPIToken, string sendEmailUrl)
         {
-            setConfig();
+            _connectionString = connString;
+            _sendEmailAPIToken = sendEmailAPIToken;
+            _sendEmailUrl = sendEmailUrl;
+            _logger = new MyLogger(connString);
         }
 
-        private void setConfig()
-        {
-            IConfiguration configuration = new ConfigurationBuilder()
-              .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
-              .AddJsonFile("appsettings.json", optional: true, reloadOnChange: false)
-              .Build();
-
-            try
-            {
-                _connectionString = configuration["AppSettings:" + "ConnectionString"];
-            }
-            catch { }
-
-            try
-            {
-                _sendEmailAPIToken = configuration["AppSettings:" + "SendEmailAPIToken"];
-            }
-            catch { }
-
-            try
-            {
-                _sendEmailUrl = configuration["AppSettings:" + "SendEmailUrl"];
-            }
-            catch { }
-
-        }
+ 
 
         public async Task<bool> Run()
         {
@@ -63,7 +43,7 @@ namespace Cyberbian.Process.Main.Lib
             {
                 HasError = true;
                 Exc = ex;
-                Log("MainWork:Run", null, ex);
+                _logger.Log("MainWork:Run", null, ex);
             }
             return success;
         }
@@ -131,6 +111,9 @@ namespace Cyberbian.Process.Main.Lib
                         IncomingEmailPayload incomingEmailPayload = JsonConvert.DeserializeObject<IncomingEmailPayload>(currentIncomingEmail.RawData);
                         if (currentIncomingEmail.MemberId > 0)
                         {
+                            AIMemberORM aiMemberORM = new AIMemberORM(_connectionString);
+                            AIMember aiMember = aiMemberORM.Get(currentIncomingEmail.MemberId, 1);
+
                             Member currentMember = memberORM.GetById(currentIncomingEmail.MemberId);
                             List<IncomingEmail>? lstIncomingEmailSameSubject = null;
                             string filteredIncomingSubject = currentIncomingEmail.IncomingSubject.Replace("Re: ", string.Empty);
@@ -141,27 +124,35 @@ namespace Cyberbian.Process.Main.Lib
 
 
                             string knowledgeScope = string.Empty;
-                            //knowledgeScope += filteredIncomingSubject + Environment.NewLine;
-                            knowledgeScope += "Your name is Bert.  You were born on the date of " + currentMember.DateCreated.ToString("F") + " UTC timezone";
-                            knowledgeScope += @"Assume the following set of email messages that are in chronological order.  Each complete email message 
-                            is separated by the term [[END]] before the next one.";
+                            knowledgeScope += aiMember.PersonaPrompt;
+                            knowledgeScope += "Your name is " + aiMember.AliasName + ".  You were born on the date of " + currentMember.DateCreated.ToString("F") + " UTC timezone";
+                            knowledgeScope += "Your gender is " + aiMember.Gender + ".";
                             foreach (IncomingEmail sameSubjectIncomingEmail in lstIncomingEmailSameSubject)
                             {
                                 IncomingEmailPayload sameSubjectIncomingEmailPayload = JsonConvert.DeserializeObject<IncomingEmailPayload>(sameSubjectIncomingEmail.RawData);
+                                knowledgeScope += @"""""""" + Environment.NewLine;
                                 knowledgeScope += @"From:  " + sameSubjectIncomingEmail.IncomingFrom + Environment.NewLine;
                                 knowledgeScope += @"To:  " + sameSubjectIncomingEmail.IncomingTo + Environment.NewLine;
                                 knowledgeScope += @"Recipient Name:  " + currentMember.FirstName + Environment.NewLine;
                                 knowledgeScope += @"DateReceived:  " + sameSubjectIncomingEmail.DateCreated + Environment.NewLine;
                                 knowledgeScope += @"Subject:  " + sameSubjectIncomingEmail.IncomingSubject + Environment.NewLine;
                                 knowledgeScope += @"BodyText:  " + sameSubjectIncomingEmailPayload.TextBody.Replace("bert", string.Empty) + Environment.NewLine;
-                                knowledgeScope += @"[[END]]" + Environment.NewLine;
+                                knowledgeScope += @"""""""" + Environment.NewLine;
                                 //knowledgeScope += sameSubjectIncomingEmailPayload.TextBody + Environment.NewLine;
                             }
                             OpenAIClient openAIClient = new OpenAIClient();
                             openAIClient.SetKnowledgeScope(knowledgeScope);
-                            openAIClient.SetUserQuestion("What would a kind and friendly reply be?  Only provide the BodyText.  The recipient name is " + currentMember.FirstName + Environment.NewLine);
+                            //openAIClient.SetUserQuestion("Write a kind reply to the message or question?  Only provide the BodyText.  The recipient name is " + currentMember.FirstName + Environment.NewLine);
+                            string userQuestion = string.Empty;
+                            userQuestion += aiMember.UserQuestionPrompt;
+                            userQuestion += "  The recipient name is " + currentMember.FirstName + Environment.NewLine;
+                            openAIClient.SetUserQuestion(userQuestion);
+
+                            //openAIClient.SetUserQuestion("Write a kind reply to the message or question?  Only provide the BodyText.  The recipient name is " + currentMember.FirstName + Environment.NewLine);
+                            int msgCountBeforeSend = openAIClient.Messages.Count;
                             await openAIClient.SendMessage();
                             List<Message> messages = openAIClient.Messages;
+                            int msgCountAfterSend = openAIClient.Messages.Count;
                             if (messages != null && messages.Count > 0)
                             {
                                 Message replyMessage = messages.LastOrDefault();
@@ -169,7 +160,14 @@ namespace Cyberbian.Process.Main.Lib
                                 outboundEmailRequest.To = incomingEmailPayload.From;
                                 outboundEmailRequest.From = incomingEmailPayload.To;
                                 outboundEmailRequest.ReplyTo = incomingEmailPayload.To;
-                                outboundEmailRequest.Subject = incomingEmailPayload.Subject;
+                                if (lstIncomingEmailSameSubject.Count == 1)
+                                {
+                                    outboundEmailRequest.Subject = "Re:  " + incomingEmailPayload.Subject;
+                                }
+                                else
+                                {
+                                    outboundEmailRequest.Subject = incomingEmailPayload.Subject;
+                                }
                                 outboundEmailRequest.TextBody = incomingEmailPayload.TextBody;
                                 outboundEmailRequest.HtmlBody = "<html><body>" + replyMessage.content + "</body></html>";
                                 outboundEmailRequest.MessageStream = "outbound";
@@ -201,31 +199,31 @@ namespace Cyberbian.Process.Main.Lib
                     {
                         currentIncomingEmail.IsError = true;
                         currentIncomingEmail.ErrorStr = exc.Message + Environment.NewLine + exc.StackTrace;
-                        Log("ProcessIncomingEmail", jsonPayloadString, exc);
+                        _logger.Log("ProcessIncomingEmail", jsonPayloadString, exc);
                     }
                 }
 
             }
         }
-        public void Log(string MsgSource, string Payload = null, Exception ex = null)
-        {
-            try
-            {
-                SyslogORM orm = new SyslogORM(_connectionString);
-                Syslog syslog = new Syslog();
-                syslog.MsgSource = MsgSource;
-                if (Payload != null)
-                {
-                    syslog.Payload = Payload;
-                }
-                if (ex != null)
-                {
-                    syslog.MsgText = ex.Message + Environment.NewLine + ex.StackTrace;
-                }
-                syslog = orm.Create(syslog);
-            }
-            catch { }
+        //public void Log(string MsgSource, string Payload = null, Exception ex = null)
+        //{
+        //    try
+        //    {
+        //        SyslogORM orm = new SyslogORM(_connectionString);
+        //        Syslog syslog = new Syslog();
+        //        syslog.MsgSource = MsgSource;
+        //        if (Payload != null)
+        //        {
+        //            syslog.Payload = Payload;
+        //        }
+        //        if (ex != null)
+        //        {
+        //            syslog.MsgText = ex.Message + Environment.NewLine + ex.StackTrace;
+        //        }
+        //        syslog = orm.Create(syslog);
+        //    }
+        //    catch { }
 
-        }
+        //}
     }
 }

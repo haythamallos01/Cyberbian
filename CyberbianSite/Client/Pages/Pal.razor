@@ -1,0 +1,65 @@
+﻿@page "/Pal"
+@using CyberbianSite.Client.Authentication
+@inject AuthenticationStateProvider authStateProvider
+@inject NavigationManager navManager
+@inject HttpClient httpClient
+
+<h3>Your AI Pal - Bert</h3>
+
+
+
+<div class="rs-features bg1 pt-126 md-pt-71 md-pb-75">
+    <div class="container relative">
+        <div class="container d-flex flex-column vh-100">
+            <img src="assets/images/bot/penpal-bert.jpg" Style="width: 15rem;" />
+        </div>
+        <div class="text-center">
+            <h3>Hi, I'm Bert - Your AI Pal</h3>
+        </div>
+        <hr />
+
+        <AuthorizeView>
+            <Authorized>
+
+                @if (!@isSeeded)
+                {
+                    <label>You will shortly be able to communicate with Bert by email.  First, let's create your new friend.</label>
+                    <div class="text-left">
+                        <label>Your new pal, Bert, is ready to be born!  Inspire its creation into this world by seeding it with words of wisdom.  This will make your new pal unique to you.</label>
+                        <br />
+                        <label><b>Inspirational seed phrase:</b>  (ex. Be kind and loving so when I need you can cheer me up.)</label>
+                        <br />
+                        <InputTextArea @bind-Value="seedContent" rows="5" style="width:100%"
+                                       placeholder="Enter your seeding text here or leave empty and will surprise you ..." />
+                    </div>
+                    <hr />
+                    <div class="text-center">
+                        <button type="submit" @onclick="OnSubmitCreatePal">Create my new pal</button>
+                    </div>
+                }
+                else
+                {
+                    <div class="text-center">
+                        <p>You can email me and I will respond in a kind way, just like a good friend would.  Try me!</p>
+                        <p><b>Here is my email address</b></p>
+                        <p><a href="mailto:@botEmailAddress">@botEmailAddress</a></p>
+                        <p><b>You can also <a href="/PalChat">chat</a> with me.</b></p>
+                         <p><b>My birthdate is:  </b>@_aimember.Birthdate.ToString("G") UTC</p>
+                        <p><b>I was inspired with your seed words when I was created and have embraced this philosophy in my AI life.</b></p>
+                        <p>@_aimember.GeneratedSeed</p>
+
+                    </div>
+
+                }
+
+            </Authorized>
+            <NotAuthorized>
+                <div class="text-center">
+                    <p>To meet Bert, you first have to <a href="/login">Login</a> or <a href="/register">Register</a></p>
+                </div>
+            </NotAuthorized>
+        </AuthorizeView>
+
+    </div>
+</div>
+

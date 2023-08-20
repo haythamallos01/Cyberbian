@@ -9,10 +9,11 @@
 
   <ItemGroup>
     <PackageReference Include="Azure.Communication.Email" Version="1.0.0" />
+    <PackageReference Include="Azure.Communication.Sms" Version="1.0.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Cyberbian.Common.Lib\Cyberbian.Common.csproj" />
+    <ProjectReference Include="..\Cyberbian.Common\Cyberbian.Common.csproj" />
   </ItemGroup>
 
   <ItemGroup>

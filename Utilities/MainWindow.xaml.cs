@@ -6,6 +6,7 @@ using System.Windows.Media.TextFormatting;
 using Azure;
 using Azure.Communication.Email;
 using Cyberbian.Common;
+using Azure.Communication.Sms;
 
 namespace Utilities
 {
@@ -120,6 +121,28 @@ namespace Utilities
             {
                 string randomText = StringHelper.RandomString(9);
                 MessageBox.Show(randomText);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void sendSMSButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                string connectionString = "endpoint=https://cyberbian-communication-services-main.unitedstates.communication.azure.com/;accesskey=nn4HLpUjL6PY55A5l6cMIzbDBHPc/6hdEA5MjDjJjMCNsZ8DuoumtMgu+lygv6bw/eITwWlfB3nm9+IrAev/KA==";
+                SmsClient smsClient = new SmsClient(connectionString);
+                smsClient.Send(
+                    from: "+18332994804", // Your e.164 formatted from phone number used to send SMS
+                    to:  new string[] {"+16195590655"},
+                    message:  "Hello Word from ACS",
+                    options:  new SmsSendOptions(enableDeliveryReport: true)
+                    {
+                        Tag = "botchat", //optional custom tags
+                    }
+                    );
             }
             catch (Exception ex)
             {

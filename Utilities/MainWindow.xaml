@@ -11,6 +11,7 @@
         <Button Name="talkingAIButton" Content="Talking Avatar" HorizontalAlignment="Left" Margin="152,10,0,0" VerticalAlignment="Top" Height="20" Width="130" Click="talkingAIButton_Click"/>
         <Button Name="sendEmailAzureButton" Content="Send Email Azure Communction Services" HorizontalAlignment="Left" Margin="287,10,0,0" VerticalAlignment="Top" Width="275" Click="sendEmailAzureButton_Click"/>
         <Button Name="stringHelperButton" Content="String Helper" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Width="137" Click="stringHelperButton_Click"/>
+        <Button Name="sendSMSButton" Content="Send SMS" HorizontalAlignment="Left" Margin="152,35,0,0" VerticalAlignment="Top" Width="130" Click="sendSMSButton_Click"/>
 
     </Grid>
 </Window>
