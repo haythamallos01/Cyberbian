@@ -6,21 +6,13 @@ using CyberbianSite.Shared;
 using Newtonsoft.Json;
 using System.Net;
 using System.Text;
-using System.Linq;
-using System.Xml.Schema;
 
 namespace Cyberbian.Common.Worker
 {
-    public class EmailWorker
+    public class EmailWorker : BaseWorker
     {
-        public bool HasError { get; set; }
-        public Exception Exc { get; set; }
-
-        private string _connectionString { get; set; }
         private string _sendEmailAPIToken { get; set; }
         private string _sendEmailUrl { get; set; }
-
-        private MyLogger _logger = null;
 
         public EmailWorker(string connString, string sendEmailAPIToken, string sendEmailUrl)
         {
@@ -30,20 +22,18 @@ namespace Cyberbian.Common.Worker
             _logger = new MyLogger(connString);
         }
 
- 
-
         public async Task<bool> Run()
         {
             bool success = false;
             try
             {
-                await ProcessIncomingEmail();
+                await Process();
             }
             catch (Exception ex)
             {
                 HasError = true;
                 Exc = ex;
-                _logger.Log("MainWork:Run", null, ex);
+                _logger.Log("MainProcess:EmailWorker:Run", null, ex);
             }
             return success;
         }
@@ -94,7 +84,7 @@ namespace Cyberbian.Common.Worker
             return lstIncomingEmail;
         }
 
-        private async Task ProcessIncomingEmail()
+        private async Task Process()
         {
             // check incoming email
             MemberORM memberORM = new MemberORM(_connectionString);

@@ -107,5 +107,10 @@ namespace CyberbianSite.Client.Pages
 
         }
 
+        protected void SentTextMessage()
+        {
+
+        }
+
     }
 }

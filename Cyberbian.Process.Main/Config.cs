@@ -8,13 +8,29 @@ namespace Cyberbian.Process.Main
         private int _nCheckIntervalInMs = 5000;
         private string _strConnectionString = null;
         private string _strSendEmailAPIToken = null;
-        private string _strSendEmailUrl= null;
+        private string _strSendEmailUrl = null;
+        private string _strSMSFromPhoneNumberE164 = null;
+        private string _strAzureCommunicationServiceEndpoint = null;
 
         private static readonly string KEY_CLIENT_ID = "ClientID";
         private static readonly string KEY_CHECK_INTERVAL_IN_MS = "CheckIntervalInMs";
         private static readonly string KEY_CONNECTION_STRING = "ConnectionString";
         private static readonly string KEY_SEND_EMAIL_API_TOKEN = "SendEmailAPIToken";
         private static readonly string KEY_SEND_EMAIL_URL = "SendEmailUrl";
+        private static readonly string KEY_SMS_FROM_PHONE_NUMBER_E164 = "SMSFromPhoneNumberE164";
+        private static readonly string KEY_AZURE_COMMUNICATION_SERVICE_ENDPOINT = "AzureCommunicationServiceEndpoint";
+
+        public string AzureCommunicationServiceEndpoint
+        {
+            get { return _strAzureCommunicationServiceEndpoint; }
+            set { _strAzureCommunicationServiceEndpoint = value; }
+        }
+
+        public string SMSFromPhoneNumberE164
+        {
+            get { return _strSMSFromPhoneNumberE164; }
+            set { _strSMSFromPhoneNumberE164 = value; }
+        }
 
         public string ConnectionString
         {
@@ -82,6 +98,19 @@ namespace Cyberbian.Process.Main
                 _strSendEmailUrl = configuration["AppSettings:" + KEY_SEND_EMAIL_URL];
             }
             catch { }
+
+            try
+            {
+                _strSMSFromPhoneNumberE164 = configuration["AppSettings:" + KEY_SMS_FROM_PHONE_NUMBER_E164];
+            }
+            catch { }
+
+            try
+            {
+                _strAzureCommunicationServiceEndpoint = configuration["AppSettings:" + KEY_AZURE_COMMUNICATION_SERVICE_ENDPOINT];
+            }
+            catch { }
+
         }
     }
 }

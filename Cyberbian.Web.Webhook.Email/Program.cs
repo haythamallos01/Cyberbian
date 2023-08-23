@@ -47,6 +47,21 @@ namespace Cyberbian.Web.Webhook.Email
                 return null;
 
             });
+
+            app.MapPost("/webhook/sms/inbound", async (HttpRequest request) =>
+            {
+                string body = "";
+                using (StreamReader stream = new StreamReader(request.Body))
+                {
+                    body = await stream.ReadToEndAsync();
+                }
+                string decodedBody = HttpUtility.UrlDecode(body);
+                // store in db
+                StorageHelper storageHelper = new StorageHelper(databaseOptions.ConnectionString);
+                storageHelper.SaveSMSInbound(decodedBody, "SMS-INBOUND");
+                return HttpUtility.UrlDecode(body);
+            });
+
             app.Run();
         }
     }

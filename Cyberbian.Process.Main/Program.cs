@@ -17,11 +17,13 @@ namespace Cyberbian.Process.Main
 
             logger.Log("Main Service", "Starting main service");
             EmailWorker emailWorker = new EmailWorker(config.ConnectionString, config.SendEmailAPIToken, config.SendEmailUrl);
+            SMSWorker smsWorker = new SMSWorker(config.ConnectionString, config.SMSFromPhoneNumberE164, config.AzureCommunicationServiceEndpoint);
 
             Console.WriteLine("Processing ... create empty stop file to quit gracefully");
             while (!_bStop)
             {
                 await emailWorker.Run();
+                await smsWorker.Run();
                 await Task.Delay(_nCheckIntervalInMs);
                 if (File.Exists(stopFilepath))
                 {

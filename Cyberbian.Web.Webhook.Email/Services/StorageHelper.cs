@@ -10,11 +10,12 @@ namespace Cyberbian.Web.Webhook.Email.Services
     {
         private string? _connectionString { get; set; }
 
-        public StorageHelper(string connectionString) {
+        public StorageHelper(string connectionString)
+        {
             _connectionString = connectionString;
         }
 
-        public void SaveEmailInbound(string data, string msgSource, bool isTest=false)
+        public void SaveEmailInbound(string data, string msgSource, bool isTest = false)
         {
             try
             {
@@ -68,6 +69,20 @@ namespace Cyberbian.Web.Webhook.Email.Services
                 }
                 catch (Exception ex2) { }
             }
+        }
+
+        public void SaveSMSInbound(string data, string msgSource)
+        {
+            try
+            {
+                IncomingSMS incomingSMS = new IncomingSMS();
+                incomingSMS.MsgSource = msgSource;
+                incomingSMS.IncomingRawText = data;
+                IncomingSMSORM incomingSMSORM = new IncomingSMSORM(_connectionString);
+                incomingSMS = incomingSMSORM.Create(incomingSMS);
+
+            }
+            catch (Exception ex2) { }
         }
     }
 }

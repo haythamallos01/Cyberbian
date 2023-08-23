@@ -23,5 +23,6 @@ namespace CyberbianSite.Shared
         public string? UserQuestionPrompt { get; set; }
         public string? AliasName { get; set; }
         public string? Gender { get; set; }
+        public string? PhoneNumberSMSE163 { get; set; }
     }
 }

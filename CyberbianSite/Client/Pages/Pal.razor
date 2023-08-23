@@ -39,12 +39,21 @@
                 }
                 else
                 {
-                    <div class="text-center">
-                        <p>You can email me and I will respond in a kind way, just like a good friend would.  Try me!</p>
-                        <p><b>Here is my email address</b></p>
-                        <p><a href="mailto:@botEmailAddress">@botEmailAddress</a></p>
-                        <p><b>You can also <a href="/PalChat">chat</a> with me.</b></p>
-                         <p><b>My birthdate is:  </b>@_aimember.Birthdate.ToString("G") UTC</p>
+                    <div class="text-left">
+                        <p>You can connect with me in different ways and I will respond in a kind way, just like a good friend would.  Try me!</p>
+                        <p>My email address is  <a href="mailto:@botEmailAddress">@botEmailAddress</a></p>
+                        <p>Want to chat with me now?  <a href="/PalChat">chat</a></p>
+                        @if (string.IsNullOrEmpty(_aimember.PhoneNumberSMSE163))
+                        {
+                            <p>Want to text me? Send these three letters only to 1-833-299-4804 to get started:  <b>@_member.DefaultHandle.Substring(0, 3)</b> </p>
+@*                             <p><button type="submit" @onclick="SentTextMessage">I did not get a reply to my text</button></p>
+ *@                            
+                        }
+                        else
+                        {
+                            <p>Text me anytime:  1-833-299-4804</p>
+                        }
+                        <p><b>My birthdate is:  </b>@_aimember.Birthdate.ToString("G") UTC</p>
                         <p><b>I was inspired with your seed words when I was created and have embraced this philosophy in my AI life.</b></p>
                         <p>@_aimember.GeneratedSeed</p>
 

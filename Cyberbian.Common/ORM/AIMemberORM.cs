@@ -33,6 +33,7 @@ namespace Cyberbian.Common.ORM
       ,[UserQuestionPrompt]
       ,[AliasName]
       ,[Gender]
+      ,[PhoneNumberSMSE163]
         FROM [AIMember]";
 
         public static readonly string INSERT_SQL =
@@ -51,6 +52,7 @@ namespace Cyberbian.Common.ORM
            ,[UserQuestionPrompt]
            ,[AliasName]
            ,[Gender]
+           ,[PhoneNumberSMSE163]
           )
      VALUES
            (@MemberId
@@ -66,8 +68,15 @@ namespace Cyberbian.Common.ORM
            ,@UserQuestionPrompt
            ,@AliasName
            ,@Gender
+           ,@PhoneNumberSMSE163
             ) SELECT CAST(SCOPE_IDENTITY() as numeric(10))";
 
+        public static readonly string UPDATE_OUTGOING_SQL =
+   @"
+            UPDATE [AIMember] SET 
+            [DateModified]=@DateModified, 
+            [PhoneNumberSMSE163]=@PhoneNumberSMSE163
+            ";
         public AIMemberORM(string connString)
         {
             _connectionString = connString;
@@ -81,7 +90,7 @@ namespace Cyberbian.Common.ORM
             }
             if (string.IsNullOrEmpty(aimember.Gender))
             {
-                aimember.AliasName = Gender.MALE.ToString();
+                aimember.Gender = Gender.MALE.ToString();
             }
             using (var connection = new SqlConnection(_connectionString))
             {
@@ -110,6 +119,27 @@ namespace Cyberbian.Common.ORM
                 aimember = connection.Query<AIMember>(sql, new { AIMemberId = aimemberId, AITypeId = aitypeid }).FirstOrDefault();
             }
             return aimember;
+        }
+
+        public AIMember GetByPhoneNumber(string phoneNumber)
+        {
+            AIMember? aimember = null;
+            var sql = SELECT_SQL + " WHERE PhoneNumberSMSE163=@PhoneNumberSMSE163";
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                aimember = connection.Query<AIMember>(sql, new { PhoneNumberSMSE163 = phoneNumber }).FirstOrDefault();
+            }
+            return aimember;
+        }
+
+        public void UpdatePhoneNumber(long memberId, long aiTypeId, string phoneNumber)
+        {
+            DateTime DateModified = DateTime.UtcNow;
+            var sql = UPDATE_OUTGOING_SQL + " WHERE AIMemberId=@AIMemberId and AITypeId=@AITypeId";
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                connection.ExecuteScalar<int>(sql, new {DateModified = DateModified, PhoneNumberSMSE163 = phoneNumber, AIMemberId = memberId, AITypeId = aiTypeId });
+            }
         }
 
     }

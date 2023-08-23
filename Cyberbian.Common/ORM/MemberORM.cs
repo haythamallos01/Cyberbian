@@ -99,6 +99,18 @@ namespace Cyberbian.Common.ORM
             return member;
         }
 
+        public Member GetByPartialHandleId(string handleId)
+        {
+            Member? member = null;
+            var sql = SELECT_SQL + " WHERE (DefaultHandle like CONCAT(@handleId, '%'))";
+
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                member = connection.Query<Member>(sql, new { handleId = handleId }).FirstOrDefault();
+            }
+            return member;
+        }
+
         public Member GetById(long memberId)
         {
             Member? member = null;
