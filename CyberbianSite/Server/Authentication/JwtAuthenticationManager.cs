@@ -8,7 +8,7 @@ namespace CyberbianSite.Server.Authentication
     public class JwtAuthenticationManager
     {
         public const string JWT_SECURITY_KEY = "NVnkvf5M4bqmel3gZ888jkn2J37ecxHROG85lo6meLN11u8EFIEILOXgbu5l96W";
-        private const int JWT_TOKEN_VALIDITY_MINS = 20;
+        private const int JWT_TOKEN_VALIDITY_MINS = 10080;
 
         private UserAccountService _userAccountService;
 

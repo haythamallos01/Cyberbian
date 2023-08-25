@@ -20,6 +20,7 @@ namespace CyberbianSite.Client.Pages
         private Member? _member;
         private AIMember? _aimember;
         private IEnumerable<Claim> _claims = Enumerable.Empty<Claim>();
+        private bool _isBusy;
 
         [Inject]
         public OpenAIService OpenAIService { get; set; }
@@ -73,6 +74,7 @@ namespace CyberbianSite.Client.Pages
 
         protected async Task OnSubmitCreatePal()
         {
+            _isBusy = true;
             try
             {
                 if (string.IsNullOrEmpty(seedContent))
@@ -102,9 +104,11 @@ namespace CyberbianSite.Client.Pages
                 var aimemberResponse = await httpClient.PostAsJsonAsync<AIMember>("/api/data/aimember", aimember);
                 await GetClaimsPrincipalData();
                 StateHasChanged();
+                navManager.NavigateTo("/Pal", true);
             }
-            catch (Exception ex) { }
-
+            catch (Exception ex) {
+                _isBusy = false;
+            }
         }
 
         protected void SentTextMessage()

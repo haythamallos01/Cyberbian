@@ -85,7 +85,7 @@ namespace Cyberbian.Common.ORM
         public List<IncomingSMS> GetUnprocessed()
         {
             List<IncomingSMS>? ret = null;
-            var sql = SELECT_SQL + " WHERE (IsProcessed=0 or IsProcessed is null) and (IsError = 0 or isError is null)";
+            var sql = SELECT_SQL + " WHERE (IsProcessed=0 or IsProcessed is null) and (IsError = 0 or isError is null) and (EventEventType = 'Microsoft.Communication.SMSReceived')";
             using (var connection = new SqlConnection(_connectionString))
             {
                 ret = connection.Query<IncomingSMS>(sql).ToList();

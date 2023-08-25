@@ -110,13 +110,13 @@ namespace Cyberbian.Common.ORM
             return aimember;
         }
 
-        public AIMember Get(long aimemberId, long aitypeid)
+        public AIMember Get(long memberId, long aitypeid)
         {
             AIMember? aimember = null;
-            var sql = SELECT_SQL + " WHERE AIMemberId=@AIMemberId and AITypeId=@AITypeId";
+            var sql = SELECT_SQL + " WHERE MemberId=@MemberId and AITypeId=@AITypeId";
             using (var connection = new SqlConnection(_connectionString))
             {
-                aimember = connection.Query<AIMember>(sql, new { AIMemberId = aimemberId, AITypeId = aitypeid }).FirstOrDefault();
+                aimember = connection.Query<AIMember>(sql, new { MemberId = memberId, AITypeId = aitypeid }).FirstOrDefault();
             }
             return aimember;
         }

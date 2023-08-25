@@ -67,11 +67,6 @@ namespace Cyberbian.Common.Worker
                         var lstIncomingSMSEventModel = JsonConvert.DeserializeObject<List<IncomingSMSEventModel>>(incomingSMS.IncomingRawText);
                         if (lstIncomingSMSEventModel != null && lstIncomingSMSEventModel.Count > 0)
                         {
-                            if (lstIncomingSMSEventModel[0].eventType != "Microsoft.Communication.SMSReceived")
-                            {
-                                continue;
-                            }
-
                             string message = lstIncomingSMSEventModel[0].data.message.Trim();
                             AIMemberORM aiMemberORM = new AIMemberORM(_connectionString);
                             bool isNewSMSUser = false;
@@ -124,6 +119,7 @@ namespace Cyberbian.Common.Worker
                                     if (messages != null && messages.Count > 0)
                                     {
                                         Message replyMessage = messages.LastOrDefault();
+                                        incomingSMS.OutgoingMessage = replyMessage.content;
                                         openAIClient.ClearConversation();
                                         sendSMS(incomingSMS.OutgoingTo, replyMessage.content);
 

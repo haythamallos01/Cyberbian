@@ -2,6 +2,7 @@
 @using System.Net
 @using CyberbianSite.Client.Authentication
 @using CyberbianSite.Shared
+@using System.ComponentModel.DataAnnotations
 @inject HttpClient httpClient
 @inject IJSRuntime js
 @inject AuthenticationStateProvider authStateProvider
@@ -17,7 +18,7 @@
             <div class="mb-3">
                 <label for="firstName">First Name</label>
                 <InputText id="firstName" @bind-Value="user.FirstName" class="form-control" />
-                <ValidationMessage For="@(() => user.FirstName)" />
+                <ValidationMessage For="@(() => user.FirstName)" Class="mt-2 sm:ml-4 font-semibold text-red-600" />
             </div>
             <div class="mb-3">
                 <label for="lastName">Last Name</label>
@@ -40,7 +41,12 @@
                 <ValidationMessage For="@(() => user.ConfirmPassword)" />
 
             </div>
-            <button type="submit" class="btn btn-primary">Register</button>
+            <button type="submit" class="btn btn-primary" disabled="@_isBusy">Register</button>
+            @if (_isBusy)
+            {
+                <div class="spinner"></div>
+            }
+
             <div class="mb-3">
                 <label>@errorMsg</label>
             </div>
@@ -52,8 +58,10 @@
 @code {
     UserRegister user = new UserRegister();
     private string? errorMsg = string.Empty;
+    private bool _isBusy;
     private async Task HandleRegistration()
     {
+        _isBusy = true;
         //Console.WriteLine($"Register User with the Email {user.Email}");
         var registerResponse = await httpClient.PostAsJsonAsync<UserRegister>("/api/Account/Register", user);
         if (registerResponse.IsSuccessStatusCode)
@@ -67,7 +75,9 @@
         else if (registerResponse.StatusCode == HttpStatusCode.Unauthorized)
         {
             errorMsg = "Could not create account.  Email already in use.";
+            _isBusy = false;
             StateHasChanged();
         }
+
     }
 }
