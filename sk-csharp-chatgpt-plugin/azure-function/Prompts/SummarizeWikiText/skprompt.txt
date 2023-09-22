@@ -1,0 +1,11 @@
+INSTRUCTIONS
+Summarize the Wikipedia article using 2-3 sentences.
+
+***************
+ARTICLE
+***************
+{{$input}}
+
+***************
+SUMMARIZATION
+***************

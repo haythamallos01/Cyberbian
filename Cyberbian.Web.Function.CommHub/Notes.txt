@@ -1,0 +1,3 @@
+﻿The actual ConnectionString setting should be setting in Azure portal
+Not in the host.json or local.settings.json.  Those are for local
+development only.

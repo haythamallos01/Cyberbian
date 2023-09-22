@@ -1,0 +1,100 @@
+﻿@page "/Poker"
+
+<div class="rs-features bg1 pt-126 md-pt-71 md-pb-75">
+    @*     <div class="container relative">
+    *@         <div class="text-center">
+        <h3>Welcome to your Poker assistant by Cyberbian!</h3>
+        <p>The bot will help make a play decision during a live poker game session based on Game Theory Optimal Strategy.</p>
+    </div>
+    <RadzenRow>
+        <RadzenColumn Size="3">
+            <RadzenSpeechToTextButton Change="@(args => OnSpeechCaptured(args, true, "Button2"))" />
+        </RadzenColumn>
+        <RadzenColumn Size="3">
+            <button class="btn btn-primary" @onclick="ClearConversation">
+                <span class="bi bi-eraser">New Hand</span>
+            </button>
+        </RadzenColumn>
+    </RadzenRow>
+    <RadzenRow>
+        <RadzenColumn Size="6">
+
+
+            <div class="sticky-bottom w-100 p-3 rounded mx-auto">
+                @if (_isSendingMessage)
+                {
+                    <div class="text-center">
+                        <div class="spinner-border spinner-border-sm" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                }
+                <div class="input-group">
+                    <textarea rows="10" class="w-100" Style="margin-top:15px" placeholder="Dictate what is happening in the hand...say SUBMIT when finished"
+                    @bind-value="_userQuestion" @bind-value:event="oninput" @onkeypress="HandleKeyPress"
+                                    disabled="@_isSendingMessage">
+                    </textarea>
+
+                </div>
+            </div>
+
+
+        </RadzenColumn>
+        <RadzenColumn Size="6">
+@*             <RadzenTextArea class="w-100" Style="margin-top:15px" placeholder="Real-time analysis here ..." />
+ *@
+            <div class="flex-grow-1">
+                @if (Messages.Count == 0)
+                {
+                    <div class="text-center">
+                        <p>Analysis here</p>
+                    </div>
+                }
+
+                @for(int i = Messages.Count - 1; i >= 0; i--)
+                {
+                    Models.Message message = Messages[i];
+                    <div class="row p-2">
+                        <div class="col-1 rounded-circle bg-dark-subtle text-center m-2 p-0"
+                             style="width:50px;height:50px;">
+                            <span class="bi fs-2 @(message.IsUser ? "bi-person-fill" : "bi-robot")"></span>
+                        </div>
+                        <div class="col-11 rounded p-1 shadow-sm @(message.IsUser ? "text-bg-primary" : "text-bg-light")">
+                            @if (message.IsUser)
+                            {
+                                <b>@message.content</b>
+                            }
+                            else
+                            {
+                                @((MarkupString)message.content)
+                            }
+                        </div>
+                    </div>
+
+                }
+@*                 @foreach (var message in Messages)
+                {
+                    <div class="row p-2">
+                        <div class="col-1 rounded-circle bg-dark-subtle text-center m-2 p-0"
+                             style="width:50px;height:50px;">
+                            <span class="bi fs-2 @(message.IsUser ? "bi-person-fill" : "bi-robot")"></span>
+                        </div>
+                        <div class="col-11 rounded p-1 shadow-sm @(message.IsUser ? "text-bg-primary" : "text-bg-light")">
+                            @if (message.IsUser)
+                            {
+                                <b>@message.content</b>
+                            }
+                            else
+                            {
+                                @((MarkupString)message.content)
+                            }
+                        </div>
+                    </div>
+                } *@
+            </div>
+        </RadzenColumn>
+    </RadzenRow>
+
+
+</div>
+

@@ -1,0 +1,16 @@
+{
+  "version": "2.0",
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "AzureSignalRConnectionString": "Endpoint=https://cyberbianchat.service.signalr.net;AccessKey=LgG0KY+i0C7CO7Qbc65qQw4HGFh0jgMvqos4vla+eAs=;Version=1.0;"
+  },
+  "logging": {
+    "applicationInsights": {
+      "samplingSettings": {
+        "isEnabled": true,
+        "excludedTypes": "Request"
+      }
+    }
+  }
+}
