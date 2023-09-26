@@ -11,6 +11,8 @@ namespace SpeechToTextSample
         // This example requires environment variables named "SPEECH_KEY" and "SPEECH_REGION"
         //static string speechKey = Environment.GetEnvironmentVariable("SPEECH_KEY");
         //static string speechRegion = Environment.GetEnvironmentVariable("SPEECH_REGION");
+        static string speechKey = "19dc69d8572e4eab88a6059f0b87a30e";
+        static string speechRegion = "eastus";
 
         static void OutputSpeechRecognitionResult(SpeechRecognitionResult speechRecognitionResult)
         {

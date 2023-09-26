@@ -54,10 +54,16 @@ public static class Example04_CombineLLMPromptsAndNativeCode
         );
 
         var result2 = await kernel.RunAsync(
-            ask,
-            search["Search"],
+            result1.Result,
             sumSkill["Summarize"]
         );
+
+
+        //var result2 = await kernel.RunAsync(
+        //    ask,
+        //    search["Search"],
+        //    sumSkill["Summarize"]
+        //);
 
         var result3 = await kernel.RunAsync(
             ask,

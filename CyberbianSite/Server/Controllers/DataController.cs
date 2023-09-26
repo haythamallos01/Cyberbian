@@ -1,5 +1,6 @@
 ﻿using Cyberbian.Common.ORM;
 using CyberbianSite.Server.Config;
+using CyberbianSite.Shared;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
@@ -73,6 +74,22 @@ namespace CyberbianSite.Server.Controllers
             else
             {
                 return incomingchat;
+            }
+        }
+
+        [HttpPost]
+        [Route("api/data/pokerlog")]
+        public ActionResult<Pokerlog> Create([FromBody] Pokerlog pokerlog)
+        {
+            PokerlogORM pokerlogORM = new PokerlogORM(_optionsDatabase.Value.ConnectionString);
+            pokerlog = pokerlogORM.Create(pokerlog);
+            if (pokerlog == null)
+            {
+                return Unauthorized();
+            }
+            else
+            {
+                return pokerlog;
             }
         }
     }

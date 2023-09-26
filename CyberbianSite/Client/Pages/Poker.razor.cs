@@ -1,7 +1,13 @@
-﻿using CyberbianSite.Client.Models;
+﻿using Azure.Core;
+using CyberbianSite.Client.Authentication;
+using CyberbianSite.Client.Models;
 using CyberbianSite.Client.Services;
+using CyberbianSite.Shared;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Net.Http.Json;
 
 namespace CyberbianSite.Client.Pages
 {
@@ -10,17 +16,18 @@ namespace CyberbianSite.Client.Pages
         private string _userQuestion = string.Empty;
         private readonly List<Message> _conversationHistory = new();
         private bool _isSendingMessage;
+        private Member? _member;
 
         private readonly string _chatBotKnowledgeScope = @"
-        You are now pretending to be Dylan. Dylan is a very shrewd, competent Texas hold 'em poker player. His primary drive is to win every single poker game.  He plays poker
+        You are now pretending to be Dillon. Dillon is a very shrewd, competent Texas hold 'em poker player. His primary drive is to win every single poker game.  He plays poker
         in accordance with Game Theory Optimal Strategy of Poker.  Use this strategy in giving the best action to take given the current state of the Texas Holdem hand.
         The current state of the game will be described.  Number of players will vary and they will be designated with a pattern of player 1, player 2 and so on.
         The players with big and small blind will be provided.  You will analyze the current state of the game and provide an action output in accordance with the template
         below.  
+        Action:  Provide no more than three sentences on the action to take. Include expected value if it can be calculated.
+        Analysis:  Then perform full analysis of the move based on Game Theory Optimal Strategy of Poker.  Provide any supportive details from the theory.  Include expected value if it can be calculated.
         Here is the current state of the game.
 ";
-        //private string value;
-        //EventConsole console;
 
         void OnTextAreaChange(string value, string name)
         {
@@ -42,11 +49,13 @@ namespace CyberbianSite.Client.Pages
         private async Task SendMessage()
         {
             if (string.IsNullOrWhiteSpace(_userQuestion)) return;
+
             AddUserQuestionToConversation();
             StateHasChanged();
             await CreateCompletion();
             ClearInput();
             StateHasChanged();
+
         }
 
         private void ClearInput() => _userQuestion = string.Empty;
@@ -55,6 +64,8 @@ namespace CyberbianSite.Client.Pages
         {
             ClearInput();
             _conversationHistory.Clear();
+            Log(string.Empty, string.Empty, true);
+
         }
 
         private async Task CreateCompletion()
@@ -63,6 +74,7 @@ namespace CyberbianSite.Client.Pages
             var assistantResponse = await OpenAIService.CreateChatCompletion(_conversationHistory);
             _conversationHistory.Add(assistantResponse);
             _isSendingMessage = false;
+            Log(_userQuestion, assistantResponse.content);
         }
 
         private void AddUserQuestionToConversation()
@@ -80,21 +92,41 @@ namespace CyberbianSite.Client.Pages
             if (updateTextArea)
             {
                 _userQuestion += speechValue + Environment.NewLine;
-                if ((_userQuestion.Length > 0) && 
-                    (_userQuestion.IndexOf("Submit", StringComparison.CurrentCultureIgnoreCase) != -1)) 
+                if ((_userQuestion.Length > 0) &&
+                    (_userQuestion.IndexOf("Submit", StringComparison.CurrentCultureIgnoreCase) != -1))
                 {
-                    if (_userQuestion.IndexOf("full analysis", StringComparison.CurrentCultureIgnoreCase) == -1)
-                    {
-                        _userQuestion += "Keep your output to no more than two sentences. Include expected value if it can be calculated.";
-                    }
-                    else
-                    {
-                        _userQuestion += "Perform full analysis based on Game Theory Optimal Strategy of Poker.  Provide any supportive details from the theory.  Include expected value if it can be calculated.";
-                    }
                     await SendMessage();
                 }
-              
+
             }
+        }
+
+        private async Task Log(string promptRequest, string promptResponse, bool isNewHand = false)
+        {
+            try
+            {
+                var authState = await authStateProvider.GetAuthenticationStateAsync();
+                var user = authState.User;
+
+                var customAuthStateProvider = (CustomAuthenticationStateProvider)authStateProvider;
+                string jwtToken = await customAuthStateProvider.GetToken();
+                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", jwtToken);
+                var memberResponse = await httpClient.GetAsync("/api/data/member/" + user.Identity.Name);
+                if (memberResponse.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+                    _member = await memberResponse.Content.ReadFromJsonAsync<Member>();
+                    Pokerlog pokerlog = new Pokerlog();
+                    pokerlog.PromptRequest = promptRequest;
+                    pokerlog.PromptResponse = promptResponse;
+                    pokerlog.MemberId = _member.MemberId;
+                    pokerlog.IsNewHand = isNewHand;
+                    var response = await httpClient.PostAsJsonAsync("/api/data/pokerlog", pokerlog);
+                    response.EnsureSuccessStatusCode();
+                    var pokerlogResponse = await response.Content.ReadFromJsonAsync<Pokerlog>();
+                }
+
+            }
+            catch { }
         }
     }
 }
